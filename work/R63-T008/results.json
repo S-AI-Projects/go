@@ -1,0 +1,28 @@
+{
+  "task_id": "R63-T008",
+  "exercise": "exercises/practice/spiral-matrix",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "metadata_check": "PASS",
+  "invalid_fixtures_tested": [
+    "missing-reference",
+    "missing-test",
+    "outside-exercise"
+  ],
+  "test_run": {
+    "exit_code": 0,
+    "executed_cases_count": 7,
+    "executed_tests": [
+      "--- PASS: TestSpiralMatrix (0.00s)",
+      "--- PASS: TestSpiralMatrix/empty_spiral (0.00s)",
+      "--- PASS: TestSpiralMatrix/trivial_spiral (0.00s)",
+      "--- PASS: TestSpiralMatrix/spiral_of_size_2 (0.00s)",
+      "--- PASS: TestSpiralMatrix/spiral_of_size_3 (0.00s)",
+      "--- PASS: TestSpiralMatrix/spiral_of_size_4 (0.00s)",
+      "--- PASS: TestSpiralMatrix/spiral_of_size_5 (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
