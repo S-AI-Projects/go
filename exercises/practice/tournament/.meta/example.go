@@ -29,6 +29,23 @@ type teamResult struct {
 	points int
 }
 
+// recordOutcome records an outcome for the team.
+// Exercise invariant: Matches Played (MP) = Wins (W) + Draws (D) + Losses (L),
+// and Points (P) = 3*W + 1*D.
+func (tr *teamResult) recordOutcome(o outcome) {
+	tr.played++
+	switch o {
+	case win:
+		tr.wins++
+		tr.points += 3
+	case draw:
+		tr.draws++
+		tr.points++
+	case loss:
+		tr.losses++
+	}
+}
+
 func readInput(reader io.Reader) ([]inputEntry, error) {
 	var entries []inputEntry
 	csvReader := csv.NewReader(reader)
@@ -65,28 +82,18 @@ func readInput(reader io.Reader) ([]inputEntry, error) {
 	return entries, nil
 }
 
+// tallyEntries aggregates match results into per-team statistics.
+// Invariant: each match contributes exactly one outcome to each of the two teams,
+// maintaining MP = W + D + L and Points = 3*W + 1*D across all teams.
 func tallyEntries(entries []inputEntry) map[string]teamResult {
 	results := make(map[string]teamResult)
 	for _, entry := range entries {
 		for i := range 2 {
 			team := entry.teams[i]
 			outcome := entry.outcomes[i]
-			result, present := results[team]
-			if !present {
-				result.team = team
-				// The rest is 0, which is correct
-			}
-			switch outcome {
-			case win:
-				result.wins++
-				result.points += 3
-			case draw:
-				result.draws++
-				result.points++
-			case loss:
-				result.losses++
-			}
-			result.played++
+			result := results[team]
+			result.team = team
+			result.recordOutcome(outcome)
 			results[team] = result
 		}
 	}
@@ -99,6 +106,10 @@ func report(writer io.Writer, resultMap map[string]teamResult) {
 		entries = append(entries, entry)
 	}
 
+	// Tiebreaker ordering invariant:
+	// 1. Primary: Points descending
+	// 2. Secondary: Wins descending
+	// 3. Tertiary: Team name alphabetically ascending
 	sort.Slice(entries, func(i, j int) bool {
 		a, b := entries[i], entries[j]
 		switch {
