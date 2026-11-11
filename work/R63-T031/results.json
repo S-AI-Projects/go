@@ -1,0 +1,173 @@
+{
+  "all_passed": true,
+  "tool_versions": {
+    "python": "3.14.6",
+    "go": "go version go1.27.4 darwin/arm64"
+  },
+  "go_test": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "returncode": 0,
+    "passed_subtests_count": 14,
+    "passed_subtests": [
+      "TestRun/reading_empty_buffer_should_fail",
+      "TestRun/can_read_an_item_just_written",
+      "TestRun/each_item_may_only_be_read_once",
+      "TestRun/items_are_read_in_the_order_they_are_written",
+      "TestRun/full_buffer_can't_be_written_to",
+      "TestRun/a_read_frees_up_capacity_for_another_write",
+      "TestRun/read_position_is_maintained_even_across_multiple_writes",
+      "TestRun/items_cleared_out_of_buffer_can't_be_read",
+      "TestRun/clear_frees_up_capacity_for_another_write",
+      "TestRun/clear_does_nothing_on_empty_buffer",
+      "TestRun/overwrite_acts_like_write_on_non-full_buffer",
+      "TestRun/overwrite_replaces_the_oldest_item_on_full_buffer",
+      "TestRun/overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read",
+      "TestRun/initial_clear_does_not_affect_wrapping_around"
+    ],
+    "failed_subtests": [],
+    "output": "=== RUN   TestRun\n=== RUN   TestRun/reading_empty_buffer_should_fail\n=== RUN   TestRun/can_read_an_item_just_written\n=== RUN   TestRun/each_item_may_only_be_read_once\n=== RUN   TestRun/items_are_read_in_the_order_they_are_written\n=== RUN   TestRun/full_buffer_can't_be_written_to\n=== RUN   TestRun/a_read_frees_up_capacity_for_another_write\n=== RUN   TestRun/read_position_is_maintained_even_across_multiple_writes\n=== RUN   TestRun/items_cleared_out_of_buffer_can't_be_read\n=== RUN   TestRun/clear_frees_up_capacity_for_another_write\n=== RUN   TestRun/clear_does_nothing_on_empty_buffer\n=== RUN   TestRun/overwrite_acts_like_write_on_non-full_buffer\n=== RUN   TestRun/overwrite_replaces_the_oldest_item_on_full_buffer\n=== RUN   TestRun/overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read\n=== RUN   TestRun/initial_clear_does_not_affect_wrapping_around\n--- PASS: TestRun (0.00s)\n    --- PASS: TestRun/reading_empty_buffer_should_fail (0.00s)\n    --- PASS: TestRun/can_read_an_item_just_written (0.00s)\n    --- PASS: TestRun/each_item_may_only_be_read_once (0.00s)\n    --- PASS: TestRun/items_are_read_in_the_order_they_are_written (0.00s)\n    --- PASS: TestRun/full_buffer_can't_be_written_to (0.00s)\n    --- PASS: TestRun/a_read_frees_up_capacity_for_another_write (0.00s)\n    --- PASS: TestRun/read_position_is_maintained_even_across_multiple_writes (0.00s)\n    --- PASS: TestRun/items_cleared_out_of_buffer_can't_be_read (0.00s)\n    --- PASS: TestRun/clear_frees_up_capacity_for_another_write (0.00s)\n    --- PASS: TestRun/clear_does_nothing_on_empty_buffer (0.00s)\n    --- PASS: TestRun/overwrite_acts_like_write_on_non-full_buffer (0.00s)\n    --- PASS: TestRun/overwrite_replaces_the_oldest_item_on_full_buffer (0.00s)\n    --- PASS: TestRun/overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read (0.00s)\n    --- PASS: TestRun/initial_clear_does_not_affect_wrapping_around (0.00s)\nPASS\nok  \tcircularbuffer\t0.408s"
+  },
+  "checks": [
+    {
+      "name": "tests_toml_counts",
+      "passed": true,
+      "expected": {
+        "total": 14,
+        "included": 14,
+        "excluded": 0
+      },
+      "actual": {
+        "total": 14,
+        "included": 14,
+        "excluded": 0
+      },
+      "detail": ""
+    },
+    {
+      "name": "uuid_28268ed4-4ff3-45f3-820e-895b44d53dfa",
+      "passed": true,
+      "expected": {
+        "description_non_empty": true,
+        "include": true,
+        "comment_names_test_or_operation": true
+      },
+      "actual": {
+        "description": "reading empty buffer should fail",
+        "include": true,
+        "comment": "Included; covered by TestRun/'reading empty buffer should fail' in cases_test.go. Calls NewBuffer(1) then ReadByte(), expecting an error when b.start == b.end in .meta/example.go (io.ByteReader contract)."
+      },
+      "detail": ""
+    },
+    {
+      "name": "uuid_2e6db04a-58a1-425d-ade8-ac30b5f318f3",
+      "passed": true,
+      "expected": {
+        "description_non_empty": true,
+        "include": true,
+        "comment_names_test_or_operation": true
+      },
+      "actual": {
+        "description": "can read an item just written",
+        "include": true,
+        "comment": "Included; covered by TestRun/'can read an item just written' in cases_test.go. Adapts canonical integer items to ASCII bytes via .meta/gen.go for io.ByteWriter/io.ByteReader, testing WriteByte('1') followed by ReadByte() == '1'."
+      },
+      "detail": ""
+    },
+    {
+      "name": "uuid_90741fe8-a448-45ce-be2b-de009a24c144",
+      "passed": true,
+      "expected": {
+        "description_non_empty": true,
+        "include": true,
+        "comment_names_test_or_operation": true
+      },
+      "actual": {
+        "description": "each item may only be read once",
+        "include": true,
+        "comment": "Included; covered by TestRun/'each item may only be read once' in cases_test.go. Verifies WriteByte('1'), ReadByte() == '1' (advancing b.start in .meta/example.go), and a second ReadByte() failing on the empty buffer."
+      },
+      "detail": ""
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "has_panic_stubs": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "has_panic_stubs": true,
+        "differs_from_example": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "maintenance_doc",
+      "passed": true,
+      "expected": {
+        "all_target_uuids_present": true,
+        "counts_recorded": true
+      },
+      "actual": {
+        "missing_uuids": [],
+        "counts_recorded": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "go_test_exit_code",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "detail": ""
+    },
+    {
+      "name": "go_test_executed_count",
+      "passed": true,
+      "expected": {
+        "passed_subtests": 14,
+        "failed_subtests": 0
+      },
+      "actual": {
+        "passed_subtests": 14,
+        "failed_subtests": 0
+      },
+      "detail": ""
+    },
+    {
+      "name": "go_test_named_target_cases",
+      "passed": true,
+      "expected": [
+        "TestRun/reading_empty_buffer_should_fail",
+        "TestRun/can_read_an_item_just_written",
+        "TestRun/each_item_may_only_be_read_once"
+      ],
+      "actual": {
+        "passed_subtests": [
+          "TestRun/reading_empty_buffer_should_fail",
+          "TestRun/can_read_an_item_just_written",
+          "TestRun/each_item_may_only_be_read_once",
+          "TestRun/items_are_read_in_the_order_they_are_written",
+          "TestRun/full_buffer_can't_be_written_to",
+          "TestRun/a_read_frees_up_capacity_for_another_write",
+          "TestRun/read_position_is_maintained_even_across_multiple_writes",
+          "TestRun/items_cleared_out_of_buffer_can't_be_read",
+          "TestRun/clear_frees_up_capacity_for_another_write",
+          "TestRun/clear_does_nothing_on_empty_buffer",
+          "TestRun/overwrite_acts_like_write_on_non-full_buffer",
+          "TestRun/overwrite_replaces_the_oldest_item_on_full_buffer",
+          "TestRun/overwrite_replaces_the_oldest_item_remaining_in_buffer_following_a_read",
+          "TestRun/initial_clear_does_not_affect_wrapping_around"
+        ],
+        "missing_named_subtests": []
+      },
+      "detail": ""
+    }
+  ]
+}

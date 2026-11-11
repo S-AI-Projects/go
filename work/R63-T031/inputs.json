@@ -1,0 +1,43 @@
+{
+  "exercise": "exercises/practice/circular-buffer",
+  "config_path": "exercises/practice/circular-buffer/.meta/config.json",
+  "resolved_files": {
+    "solution": [
+      "circular_buffer.go"
+    ],
+    "test": [
+      "circular_buffer_test.go",
+      "cases_test.go"
+    ],
+    "example": [
+      ".meta/example.go"
+    ]
+  },
+  "target_uuids": [
+    "28268ed4-4ff3-45f3-820e-895b44d53dfa",
+    "2e6db04a-58a1-425d-ade8-ac30b5f318f3",
+    "90741fe8-a448-45ce-be2b-de009a24c144"
+  ],
+  "toml_summary": {
+    "total": 14,
+    "included": 14,
+    "excluded": 0,
+    "targets": {
+      "28268ed4-4ff3-45f3-820e-895b44d53dfa": {
+        "description": "reading empty buffer should fail",
+        "include": true,
+        "comment": "Included; covered by TestRun/'reading empty buffer should fail' in cases_test.go. Calls NewBuffer(1) then ReadByte(), expecting an error when b.start == b.end in .meta/example.go (io.ByteReader contract)."
+      },
+      "2e6db04a-58a1-425d-ade8-ac30b5f318f3": {
+        "description": "can read an item just written",
+        "include": true,
+        "comment": "Included; covered by TestRun/'can read an item just written' in cases_test.go. Adapts canonical integer items to ASCII bytes via .meta/gen.go for io.ByteWriter/io.ByteReader, testing WriteByte('1') followed by ReadByte() == '1'."
+      },
+      "90741fe8-a448-45ce-be2b-de009a24c144": {
+        "description": "each item may only be read once",
+        "include": true,
+        "comment": "Included; covered by TestRun/'each item may only be read once' in cases_test.go. Verifies WriteByte('1'), ReadByte() == '1' (advancing b.start in .meta/example.go), and a second ReadByte() failing on the empty buffer."
+      }
+    }
+  }
+}

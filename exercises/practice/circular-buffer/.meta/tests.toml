@@ -4,12 +4,15 @@
 
 [28268ed4-4ff3-45f3-820e-895b44d53dfa]
 description = "reading empty buffer should fail"
+comment = "Included; covered by TestRun/'reading empty buffer should fail' in cases_test.go. Calls NewBuffer(1) then ReadByte(), expecting an error when b.start == b.end in .meta/example.go (io.ByteReader contract)."
 
 [2e6db04a-58a1-425d-ade8-ac30b5f318f3]
 description = "can read an item just written"
+comment = "Included; covered by TestRun/'can read an item just written' in cases_test.go. Adapts canonical integer items to ASCII bytes via .meta/gen.go for io.ByteWriter/io.ByteReader, testing WriteByte('1') followed by ReadByte() == '1'."
 
 [90741fe8-a448-45ce-be2b-de009a24c144]
 description = "each item may only be read once"
+comment = "Included; covered by TestRun/'each item may only be read once' in cases_test.go. Verifies WriteByte('1'), ReadByte() == '1' (advancing b.start in .meta/example.go), and a second ReadByte() failing on the empty buffer."
 
 [be0e62d5-da9c-47a8-b037-5db21827baa7]
 description = "items are read in the order they are written"
