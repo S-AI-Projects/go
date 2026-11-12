@@ -1,0 +1,42 @@
+{
+  "task_id": "R63-T007",
+  "exercise": "exercises/practice/series",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "micro_example_1": {
+    "output": "491",
+    "expected": "491"
+  },
+  "micro_example_2": {
+    "output": "\"491\\xe2\"",
+    "expected": "\"491\\xe2\""
+  },
+  "test_run": {
+    "exit_code": 0,
+    "executed_cases_count": 19,
+    "executed_tests": [
+      "--- PASS: TestUnsafeFirst (0.00s)",
+      "--- PASS: TestUnsafeFirst/slices_of_one_from_one (0.00s)",
+      "--- PASS: TestUnsafeFirst/slices_of_one_from_two (0.00s)",
+      "--- PASS: TestUnsafeFirst/slices_of_two (0.00s)",
+      "--- PASS: TestUnsafeFirst/slices_of_two_overlap (0.00s)",
+      "--- PASS: TestUnsafeFirst/slices_can_include_duplicates (0.00s)",
+      "--- PASS: TestUnsafeFirst/slices_of_a_long_series (0.00s)",
+      "--- PASS: TestAll (0.00s)",
+      "--- PASS: TestAll/slices_of_one_from_one (0.00s)",
+      "--- PASS: TestAll/slices_of_one_from_two (0.00s)",
+      "--- PASS: TestAll/slices_of_two (0.00s)",
+      "--- PASS: TestAll/slices_of_two_overlap (0.00s)",
+      "--- PASS: TestAll/slices_can_include_duplicates (0.00s)",
+      "--- PASS: TestAll/slices_of_a_long_series (0.00s)",
+      "--- PASS: TestAll/slice_length_is_too_large (0.00s)",
+      "--- PASS: TestAll/slice_length_is_way_too_large (0.00s)",
+      "--- PASS: TestAll/slice_length_cannot_be_zero (0.00s)",
+      "--- PASS: TestAll/slice_length_cannot_be_negative (0.00s)",
+      "--- PASS: TestAll/empty_series_is_invalid (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
