@@ -1,0 +1,18 @@
+{
+  "task_id": "R63-T003",
+  "exercise": "exercises/practice/affine-cipher",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "original_reference": {
+    "exit_code": 0,
+    "pass_count": 18
+  },
+  "mutant_reference": {
+    "exit_code": 1,
+    "rejected_by_test": "decode exercism",
+    "rejecting_uuid": "3f0ac7e2-ec0e-4a79-949e-95e414953438"
+  },
+  "status": "PASS"
+}
