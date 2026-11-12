@@ -1,0 +1,36 @@
+{
+  "task_id": "R63-T004",
+  "exercise": "exercises/practice/tournament",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "refactor": "Extracted recordOutcome method with invariant documentation on teamResult",
+  "test_run": {
+    "exit_code": 0,
+    "executed_cases_count": 20,
+    "executed_tests": [
+      "--- PASS: TestTallyCanonical (0.00s)",
+      "--- PASS: TestTallyCanonical/just_the_header_if_no_input (0.00s)",
+      "--- PASS: TestTallyCanonical/a_win_is_three_points,_a_loss_is_zero_points (0.00s)",
+      "--- PASS: TestTallyCanonical/a_win_can_also_be_expressed_as_a_loss (0.00s)",
+      "--- PASS: TestTallyCanonical/a_different_team_can_win (0.00s)",
+      "--- PASS: TestTallyCanonical/a_draw_is_one_point_each (0.00s)",
+      "--- PASS: TestTallyCanonical/There_can_be_more_than_one_match (0.00s)",
+      "--- PASS: TestTallyCanonical/There_can_be_more_than_one_winner (0.00s)",
+      "--- PASS: TestTallyCanonical/There_can_be_more_than_two_teams (0.00s)",
+      "--- PASS: TestTallyCanonical/typical_input (0.00s)",
+      "--- PASS: TestTallyCanonical/incomplete_competition_(not_all_pairs_have_played) (0.00s)",
+      "--- PASS: TestTallyCanonical/ties_broken_alphabetically (0.00s)",
+      "--- PASS: TestTallyCanonical/ensure_points_sorted_numerically (0.00s)",
+      "--- PASS: TestTallyExtra (0.00s)",
+      "--- PASS: TestTallyExtra/ignore_comments_and_newlines (0.00s)",
+      "--- PASS: TestTallyError (0.00s)",
+      "--- PASS: TestTallyError/Invalid_result_'Bla' (0.00s)",
+      "--- PASS: TestTallyError/Invalid_separator,_underscore (0.00s)",
+      "--- PASS: TestTallyError/Invalid_separator,_'@' (0.00s)",
+      "--- PASS: TestTallyError/Invalid_result_'dra' (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
