@@ -1,0 +1,24 @@
+{
+  "task_id": "R63-T002",
+  "exercise": "exercises/practice/relative-distance",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "regeneration_check": "PASS",
+  "test_run": {
+    "exit_code": 0,
+    "executed_cases_count": 8,
+    "executed_tests": [
+      "--- PASS: TestDegreeOfSeparation (0.00s)",
+      "--- PASS: TestDegreeOfSeparation/Direct_parent-child_relation (0.00s)",
+      "--- PASS: TestDegreeOfSeparation/Sibling_relationship (0.00s)",
+      "--- PASS: TestDegreeOfSeparation/Two_degrees_of_separation,_grandchild (0.00s)",
+      "--- PASS: TestDegreeOfSeparation/Unrelated_individuals (0.00s)",
+      "--- PASS: TestDegreeOfSeparation/Complex_graph,_cousins (0.00s)",
+      "--- PASS: TestDegreeOfSeparation/Complex_graph,_no_shortcut,_far_removed_nephew (0.00s)",
+      "--- PASS: TestDegreeOfSeparation/Complex_graph,_some_shortcuts,_cross-down_and_cross-up,_cousins_several_times_removed,_with_unrelated_family_tree (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
