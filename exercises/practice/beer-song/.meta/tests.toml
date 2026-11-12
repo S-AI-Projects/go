@@ -4,12 +4,18 @@
 
 [5a02fd08-d336-4607-8006-246fe6fa9fb0]
 description = "first generic verse"
+# Canonical test specifies verse 99 (startBottles=99, takeDown=1). In Go, generic verse formatting is exercised via Verse(8) and Verse(3) in TestBottlesVerse, and verse 99 is validated end-to-end in TestEntireSong via Song().
+comment = "Canonical test specifies verse 99 (startBottles=99, takeDown=1). In Go, generic verse formatting is exercised via Verse(8) and Verse(3) in TestBottlesVerse, and verse 99 is validated end-to-end in TestEntireSong via Song()."
 
 [77299ca6-545e-4217-a9cc-606b342e0187]
 description = "last generic verse"
+# Canonical test specifies verse 3 (startBottles=3, takeDown=1). In Go, this is covered directly by Verse(3) ('another typical verse') in TestBottlesVerse.
+comment = "Canonical test specifies verse 3 (startBottles=3, takeDown=1). In Go, this is covered directly by Verse(3) ('another typical verse') in TestBottlesVerse."
 
 [102cbca0-b197-40fd-b548-e99609b06428]
 description = "verse with 2 bottles"
+# Canonical test specifies verse 2 (startBottles=2, takeDown=1). In Go, this is covered directly by Verse(2) ('verse 2') in TestBottlesVerse, asserting the singular bottle transition in '1 bottle of beer on the wall'.
+comment = "Canonical test specifies verse 2 (startBottles=2, takeDown=1). In Go, this is covered directly by Verse(2) ('verse 2') in TestBottlesVerse, asserting the singular bottle transition in '1 bottle of beer on the wall'."
 
 [b8ef9fce-960e-4d85-a0c9-980a04ec1972]
 description = "verse with 1 bottle"

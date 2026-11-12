@@ -1,0 +1,48 @@
+{
+  "task_id": "R63-T001",
+  "exercise": "exercises/practice/beer-song",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.15.2 (v3.15.2:5e58eaad7c5, Oct 25 2026, 14:19:34) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "tests_toml_stats": {
+    "total": 8,
+    "included": 8,
+    "excluded": 0
+  },
+  "target_uuids_rationale": {
+    "5a02fd08-d336-4607-8006-246fe6fa9fb0": {
+      "description": "first generic verse",
+      "comment": "Canonical test specifies verse 99 (startBottles=99, takeDown=1). In Go, generic verse formatting is exercised via Verse(8) and Verse(3) in TestBottlesVerse, and verse 99 is validated end-to-end in TestEntireSong via Song()."
+    },
+    "77299ca6-545e-4217-a9cc-606b342e0187": {
+      "description": "last generic verse",
+      "comment": "Canonical test specifies verse 3 (startBottles=3, takeDown=1). In Go, this is covered directly by Verse(3) ('another typical verse') in TestBottlesVerse."
+    },
+    "102cbca0-b197-40fd-b548-e99609b06428": {
+      "description": "verse with 2 bottles",
+      "comment": "Canonical test specifies verse 2 (startBottles=2, takeDown=1). In Go, this is covered directly by Verse(2) ('verse 2') in TestBottlesVerse, asserting the singular bottle transition in '1 bottle of beer on the wall'."
+    }
+  },
+  "test_run": {
+    "exit_code": 0,
+    "executed_cases_count": 14,
+    "executed_tests": [
+      "--- PASS: TestBottlesVerse (0.00s)",
+      "--- PASS: TestBottlesVerse/a_typical_verse (0.00s)",
+      "--- PASS: TestBottlesVerse/another_typical_verse (0.00s)",
+      "--- PASS: TestBottlesVerse/verse_2 (0.00s)",
+      "--- PASS: TestBottlesVerse/verse_1 (0.00s)",
+      "--- PASS: TestBottlesVerse/verse_0 (0.00s)",
+      "--- PASS: TestBottlesVerse/invalid_verse (0.00s)",
+      "--- PASS: TestSeveralVerses (0.00s)",
+      "--- PASS: TestSeveralVerses/multiple_verses (0.00s)",
+      "--- PASS: TestSeveralVerses/a_different_set_of_verses (0.00s)",
+      "--- PASS: TestSeveralVerses/invalid_start (0.00s)",
+      "--- PASS: TestSeveralVerses/invalid_stop (0.00s)",
+      "--- PASS: TestSeveralVerses/start_less_than_stop (0.00s)",
+      "--- PASS: TestEntireSong (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
