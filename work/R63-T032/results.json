@@ -1,0 +1,126 @@
+{
+  "all_passed": true,
+  "tool_versions": {
+    "python": "3.14.6",
+    "go": "go version go1.27.4 darwin/arm64"
+  },
+  "go_test": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "returncode": 0,
+    "passed_tests_count": 1,
+    "passed_tests": [
+      "TestHelloWorld"
+    ],
+    "failed_tests": [],
+    "output": "=== RUN   TestHelloWorld\n--- PASS: TestHelloWorld (0.00s)\nPASS\nok  \tgreeting\t0.435s"
+  },
+  "checks": [
+    {
+      "name": "tests_toml_counts",
+      "passed": true,
+      "expected": {
+        "total": 1,
+        "included": 1,
+        "excluded": 0
+      },
+      "actual": {
+        "total": 1,
+        "included": 1,
+        "excluded": 0
+      },
+      "detail": ""
+    },
+    {
+      "name": "uuid_af9ffe10-dc13-42d8-a742-e7bdafac449d",
+      "passed": true,
+      "expected": {
+        "description_non_empty": true,
+        "include": true,
+        "comment_names_test_or_operation": true
+      },
+      "actual": {
+        "description": "Say Hi!",
+        "include": true,
+        "comment": "Implemented in hello_world_test.go as TestHelloWorld; verifies HelloWorld() == 'Hello, World!'. Hand-maintained test suite without .meta/gen.go."
+      },
+      "detail": ""
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "maintenance_doc",
+      "passed": true,
+      "expected": {
+        "has_uuid": true,
+        "has_command": true,
+        "has_mapping": true,
+        "has_inputs": true
+      },
+      "actual": {
+        "has_uuid": true,
+        "has_command": true,
+        "has_mapping": true,
+        "has_inputs": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "tools_course_check",
+      "passed": true,
+      "expected": {
+        "returncode": 0
+      },
+      "actual": {
+        "returncode": 0,
+        "stdout": "[PASS] Two generations yield identical tests; all cases preserved."
+      },
+      "detail": ""
+    },
+    {
+      "name": "go_test_exit_code",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "detail": ""
+    },
+    {
+      "name": "go_test_executed_count",
+      "passed": true,
+      "expected": {
+        "passed_count_gt_zero": true,
+        "failed_count": 0
+      },
+      "actual": {
+        "passed_count": 1,
+        "failed_count": 0
+      },
+      "detail": ""
+    },
+    {
+      "name": "go_test_named_case",
+      "passed": true,
+      "expected": "TestHelloWorld",
+      "actual": [
+        "TestHelloWorld"
+      ],
+      "detail": ""
+    }
+  ]
+}
