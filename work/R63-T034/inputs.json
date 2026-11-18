@@ -1,0 +1,21 @@
+{
+  "exercise": "exercises/practice/sublist",
+  "config_path": "exercises/practice/sublist/.meta/config.json",
+  "resolved_files": {
+    "solution": [
+      "sublist.go"
+    ],
+    "test": [
+      "sublist_test.go",
+      "cases_test.go"
+    ],
+    "example": [
+      ".meta/example.go"
+    ]
+  },
+  "toml_summary": {
+    "total": 18,
+    "included": 18,
+    "excluded": 0
+  }
+}

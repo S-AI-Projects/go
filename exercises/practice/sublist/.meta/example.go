@@ -18,21 +18,16 @@ func Sublist(l1, l2 []int) Relation {
 	}
 }
 
-func contains(l1, l2 []int) bool {
-	if len(l2) == 0 {
+// contains checks if sublist appears as a contiguous subsequence within list.
+func contains(list, sublist []int) bool {
+	if len(sublist) == 0 {
 		return true
-	} else if len(l2) > len(l1) {
+	} else if len(sublist) > len(list) {
 		return false
 	}
-	for i := range len(l1) - len(l2) + 1 {
-		if l1[i] != l2[0] {
-			continue
-		}
-		rest := true
-		for j, e := range l2 {
-			rest = rest && l1[i+j] == e
-		}
-		if rest {
+	// Exercise invariant: a sublist must match elements contiguously from start to end
+	for i := range len(list) - len(sublist) + 1 {
+		if slices.Equal(list[i:i+len(sublist)], sublist) {
 			return true
 		}
 	}

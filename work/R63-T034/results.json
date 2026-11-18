@@ -1,0 +1,116 @@
+{
+  "all_passed": true,
+  "tool_versions": {
+    "python": "3.14.6",
+    "go": "go version go1.27.4 darwin/arm64"
+  },
+  "reference_test": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "returncode": 0,
+    "passed_subtests_count": 18,
+    "passed_subtests": [
+      "TestSublist/empty_lists",
+      "TestSublist/empty_list_within_non_empty_list",
+      "TestSublist/non_empty_list_contains_empty_list",
+      "TestSublist/list_equals_itself",
+      "TestSublist/different_lists",
+      "TestSublist/false_start",
+      "TestSublist/consecutive",
+      "TestSublist/sublist_at_start",
+      "TestSublist/sublist_in_middle",
+      "TestSublist/sublist_at_end",
+      "TestSublist/at_start_of_superlist",
+      "TestSublist/in_middle_of_superlist",
+      "TestSublist/at_end_of_superlist",
+      "TestSublist/first_list_missing_element_from_second_list",
+      "TestSublist/second_list_missing_element_from_first_list",
+      "TestSublist/first_list_missing_additional_digits_from_second_list",
+      "TestSublist/order_matters_to_a_list",
+      "TestSublist/same_digits_but_different_numbers"
+    ],
+    "failed_subtests": [],
+    "output": "=== RUN   TestSublist\n=== RUN   TestSublist/empty_lists\n=== RUN   TestSublist/empty_list_within_non_empty_list\n=== RUN   TestSublist/non_empty_list_contains_empty_list\n=== RUN   TestSublist/list_equals_itself\n=== RUN   TestSublist/different_lists\n=== RUN   TestSublist/false_start\n=== RUN   TestSublist/consecutive\n=== RUN   TestSublist/sublist_at_start\n=== RUN   TestSublist/sublist_in_middle\n=== RUN   TestSublist/sublist_at_end\n=== RUN   TestSublist/at_start_of_superlist\n=== RUN   TestSublist/in_middle_of_superlist\n=== RUN   TestSublist/at_end_of_superlist\n=== RUN   TestSublist/first_list_missing_element_from_second_list\n=== RUN   TestSublist/second_list_missing_element_from_first_list\n=== RUN   TestSublist/first_list_missing_additional_digits_from_second_list\n=== RUN   TestSublist/order_matters_to_a_list\n=== RUN   TestSublist/same_digits_but_different_numbers\n--- PASS: TestSublist (0.00s)\n    --- PASS: TestSublist/empty_lists (0.00s)\n    --- PASS: TestSublist/empty_list_within_non_empty_list (0.00s)\n    --- PASS: TestSublist/non_empty_list_contains_empty_list (0.00s)\n    --- PASS: TestSublist/list_equals_itself (0.00s)\n    --- PASS: TestSublist/different_lists (0.00s)\n    --- PASS: TestSublist/false_start (0.00s)\n    --- PASS: TestSublist/consecutive (0.00s)\n    --- PASS: TestSublist/sublist_at_start (0.00s)\n    --- PASS: TestSublist/sublist_in_middle (0.00s)\n    --- PASS: TestSublist/sublist_at_end (0.00s)\n    --- PASS: TestSublist/at_start_of_superlist (0.00s)\n    --- PASS: TestSublist/in_middle_of_superlist (0.00s)\n    --- PASS: TestSublist/at_end_of_superlist (0.00s)\n    --- PASS: TestSublist/first_list_missing_element_from_second_list (0.00s)\n    --- PASS: TestSublist/second_list_missing_element_from_first_list (0.00s)\n    --- PASS: TestSublist/first_list_missing_additional_digits_from_second_list (0.00s)\n    --- PASS: TestSublist/order_matters_to_a_list (0.00s)\n    --- PASS: TestSublist/same_digits_but_different_numbers (0.00s)\nPASS\nok  \tsublist\t0.359s"
+  },
+  "checks": [
+    {
+      "name": "tests_toml_parsed",
+      "passed": true,
+      "expected": "total > 0 and included > 0",
+      "actual": {
+        "total": 18,
+        "included": 18,
+        "excluded": 0
+      },
+      "detail": ""
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "refactored_reference",
+      "passed": true,
+      "expected": {
+        "has_renamed_params": true,
+        "has_slices_equal": true,
+        "has_invariant_comment": true
+      },
+      "actual": {
+        "has_renamed_params": true,
+        "has_slices_equal": true,
+        "has_invariant_comment": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "maintenance_doc",
+      "passed": true,
+      "expected": {
+        "has_refactor_notes": true,
+        "has_diff": true,
+        "has_invariant": true
+      },
+      "actual": {
+        "has_refactor_notes": true,
+        "has_diff": true,
+        "has_invariant": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "reference_go_test_exit_code",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "detail": ""
+    },
+    {
+      "name": "reference_go_test_executed_count",
+      "passed": true,
+      "expected": {
+        "passed_count_gt_zero": true,
+        "failed_count": 0
+      },
+      "actual": {
+        "passed_count": 18,
+        "failed_count": 0
+      },
+      "detail": ""
+    }
+  ]
+}
