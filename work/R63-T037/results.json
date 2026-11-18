@@ -1,0 +1,166 @@
+{
+  "task": "R63-T037",
+  "timestamp": "2026-11-18T10:07:19.763465+00:00",
+  "all_passed": true,
+  "outcomes": [
+    {
+      "name": "tests_toml_cases",
+      "passed": true,
+      "expected": {
+        "total": 4,
+        "included": 4
+      },
+      "actual": {
+        "total": 4,
+        "included": 4
+      },
+      "detail": "All 4 canonical test cases verified in tests.toml"
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": "Learner stub in the working tree is unchanged and unsolved (panics)"
+    },
+    {
+      "name": "hints_construct_and_reference_link",
+      "passed": true,
+      "expected": {
+        "construct_named": true,
+        "reference_link": true
+      },
+      "actual": {
+        "construct_named": true,
+        "reference_link": true
+      },
+      "detail": "hints.md explains map zero values and links to the Go language specification"
+    },
+    {
+      "name": "hints_micro_examples_and_outputs",
+      "passed": true,
+      "expected": {
+        "micro_examples": true,
+        "outputs": true,
+        "avoids_full_solution": true
+      },
+      "actual": {
+        "micro_examples": true,
+        "outputs": true,
+        "avoids_full_solution": true
+      },
+      "detail": "hints.md includes working and pitfall micro-examples with expected outputs while avoiding a full solution"
+    },
+    {
+      "name": "micro_example_working_output",
+      "passed": true,
+      "expected": {
+        "exit_code": 0,
+        "stdout": "1"
+      },
+      "actual": {
+        "exit_code": 0,
+        "stdout": "1"
+      },
+      "detail": "Working micro-example successfully initializes map and prints 1"
+    },
+    {
+      "name": "micro_example_pitfall_read_output",
+      "passed": true,
+      "expected": {
+        "exit_code": 0,
+        "stdout": "0"
+      },
+      "actual": {
+        "exit_code": 0,
+        "stdout": "0"
+      },
+      "detail": "Pitfall reading from nil map safely returns zero value 0"
+    },
+    {
+      "name": "micro_example_pitfall_write_output",
+      "passed": true,
+      "expected": {
+        "non_zero_exit": true,
+        "has_panic": true
+      },
+      "actual": {
+        "exit_code": 1,
+        "has_panic": true
+      },
+      "detail": "Pitfall writing to nil map triggers expected runtime panic"
+    },
+    {
+      "name": "reference_tests_pass",
+      "passed": true,
+      "expected": {
+        "exit_code": 0,
+        "passed_gt_zero": true,
+        "failed": 0
+      },
+      "actual": {
+        "exit_code": 0,
+        "passed": 4,
+        "failed": 0
+      },
+      "detail": "Reference implementation passes all enabled test cases"
+    }
+  ],
+  "test_info": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "exit_code": 0,
+    "passed_count": 4,
+    "passed_tests": [
+      "TestTransform/single_letter",
+      "TestTransform/single_score_with_multiple_letters",
+      "TestTransform/multiple_scores_with_multiple_letters",
+      "TestTransform/multiple_scores_with_differing_numbers_of_letters"
+    ],
+    "failed_count": 0
+  },
+  "micro_results": {
+    "working": {
+      "stdout": "1",
+      "exit_code": 0
+    },
+    "pitfall_read": {
+      "stdout": "0",
+      "exit_code": 0
+    },
+    "pitfall_write": {
+      "stderr": [
+        "panic: assignment to entry in nil map",
+        ""
+      ],
+      "exit_code": 1,
+      "has_panic": true
+    }
+  },
+  "stub_info": {
+    "is_unsolved": true,
+    "differs_from_example": true
+  },
+  "hints_info": {
+    "path": "/Users/darshilsachingunjal/turing/go/exercises/practice/etl/.docs/hints.md",
+    "exists": true,
+    "byte_length": 1940,
+    "has_construct_named": true,
+    "has_reference_link": true,
+    "has_micro_examples": true,
+    "has_expected_output_1": true,
+    "has_expected_output_panic": true,
+    "no_full_solution": true
+  }
+}

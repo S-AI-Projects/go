@@ -1,0 +1,48 @@
+{
+  "task": "R63-T037",
+  "exercise": "etl",
+  "timestamp": "2026-11-18T10:07:19.762682+00:00",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "resolved_files": {
+    "solution": [
+      "etl.go"
+    ],
+    "test": [
+      "etl_test.go",
+      "cases_test.go"
+    ],
+    "example": [
+      ".meta/example.go"
+    ]
+  },
+  "canonical_tests": {
+    "total": 4,
+    "included": {
+      "78a7a9f9-4490-4a47-8ee9-5a38bb47d28f": {
+        "include": true,
+        "description": "single letter"
+      },
+      "60dbd000-451d-44c7-bdbb-97c73ac1f497": {
+        "include": true,
+        "description": "single score with multiple letters"
+      },
+      "f5c5de0c-301f-4fdd-a0e5-df97d4214f54": {
+        "include": true,
+        "description": "multiple scores with multiple letters"
+      },
+      "5db8ea89-ecb4-4dcd-902f-2b418cc87b9d": {
+        "include": true,
+        "description": "multiple scores with differing numbers of letters"
+      }
+    },
+    "excluded": {}
+  },
+  "micro_examples": {
+    "working": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tout := make(map[string]int)\n\tout[\"a\"] = 1\n\tfmt.Println(out[\"a\"])\n}\n",
+    "pitfall_read": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar out map[string]int\n\tfmt.Println(out[\"a\"])\n}\n",
+    "pitfall_write": "package main\n\nfunc main() {\n\tvar out map[string]int\n\tout[\"a\"] = 1\n}\n"
+  }
+}
