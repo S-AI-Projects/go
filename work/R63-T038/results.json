@@ -1,0 +1,159 @@
+{
+  "task": "R63-T038",
+  "timestamp": "2026-11-18T10:11:56.184874+00:00",
+  "all_passed": true,
+  "outcomes": [
+    {
+      "name": "maintenance_doc_file_map",
+      "passed": true,
+      "expected": {
+        "stub": true,
+        "test": true,
+        "example": true
+      },
+      "actual": {
+        "stub": true,
+        "test": true,
+        "example": true
+      },
+      "detail": "Maintenance doc names real stub, reference, and test paths"
+    },
+    {
+      "name": "maintenance_doc_distinguishes_generated",
+      "passed": true,
+      "expected": true,
+      "actual": true,
+      "detail": "Maintenance doc distinguishes manual vs generated artifacts"
+    },
+    {
+      "name": "maintenance_doc_validation_command",
+      "passed": true,
+      "expected": true,
+      "actual": true,
+      "detail": "Maintenance doc includes reproducible validation command"
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": "Learner stub in the working tree is unchanged and unsolved (panics)"
+    },
+    {
+      "name": "real_metadata_passes",
+      "passed": true,
+      "expected": true,
+      "actual": true,
+      "detail": "Real config passes validation: All declared exercise files resolve securely and exist on disk."
+    },
+    {
+      "name": "missing_reference_fixture_fails",
+      "passed": true,
+      "expected": {
+        "ok": false,
+        "reason_contains": "does not exist"
+      },
+      "actual": {
+        "ok": false,
+        "msg": "Declared file does not exist in 'example': .meta/nonexistent_example.go"
+      },
+      "detail": "Missing reference fixture fails as expected"
+    },
+    {
+      "name": "missing_test_fixture_fails",
+      "passed": true,
+      "expected": {
+        "ok": false,
+        "reason_contains": "does not exist"
+      },
+      "actual": {
+        "ok": false,
+        "msg": "Declared file does not exist in 'test': missing_octal_test.go"
+      },
+      "detail": "Missing test fixture fails as expected"
+    },
+    {
+      "name": "outside_exercise_fixture_fails",
+      "passed": true,
+      "expected": {
+        "ok": false,
+        "reason_contains": "traversal or escapes"
+      },
+      "actual": {
+        "ok": false,
+        "msg": "Path traversal rejected in 'example': ../etl/.meta/example.go"
+      },
+      "detail": "Outside exercise traversal fixture fails as expected"
+    },
+    {
+      "name": "reference_tests_pass",
+      "passed": true,
+      "expected": {
+        "exit_code": 0,
+        "passed": true,
+        "failed": false
+      },
+      "actual": {
+        "exit_code": 0,
+        "passed": true,
+        "failed": false
+      },
+      "detail": "All cases in octal_test.go pass against the reference implementation"
+    }
+  ],
+  "test_info": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "exit_code": 0,
+    "passed": true,
+    "failed": false,
+    "stdout_summary": [
+      "--- PASS: TestParseOctal (0.00s)",
+      "PASS",
+      "ok  \toctal\t0.548s"
+    ]
+  },
+  "fixture_info": {
+    "real_config": {
+      "ok": true,
+      "msg": "All declared exercise files resolve securely and exist on disk."
+    },
+    "missing_reference_fixture": {
+      "ok": false,
+      "msg": "Declared file does not exist in 'example': .meta/nonexistent_example.go"
+    },
+    "missing_test_fixture": {
+      "ok": false,
+      "msg": "Declared file does not exist in 'test': missing_octal_test.go"
+    },
+    "outside_exercise_fixture": {
+      "ok": false,
+      "msg": "Path traversal rejected in 'example': ../etl/.meta/example.go"
+    }
+  },
+  "stub_info": {
+    "is_unsolved": true,
+    "differs_from_example": true
+  },
+  "doc_info": {
+    "path": "/Users/darshilsachingunjal/turing/go/docs/maintenance/octal.md",
+    "exists": true,
+    "byte_length": 2949,
+    "has_stub_path": true,
+    "has_test_path": true,
+    "has_example_path": true,
+    "has_distinction": true,
+    "has_reproducible_cmd": true
+  }
+}

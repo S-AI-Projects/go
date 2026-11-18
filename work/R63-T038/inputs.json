@@ -1,0 +1,50 @@
+{
+  "task": "R63-T038",
+  "exercise": "octal",
+  "timestamp": "2026-11-18T10:11:56.184191+00:00",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "config_files_mapping": {
+    "solution": [
+      "octal.go"
+    ],
+    "test": [
+      "octal_test.go"
+    ],
+    "example": [
+      ".meta/example.go"
+    ]
+  },
+  "test_cases": [
+    {
+      "input": "1",
+      "expectedNum": 1,
+      "expectErr": false,
+      "position": "first"
+    },
+    {
+      "input": "10",
+      "expectedNum": 8,
+      "expectErr": false
+    },
+    {
+      "input": "1234567",
+      "expectedNum": 342391,
+      "expectErr": false,
+      "position": "middle"
+    },
+    {
+      "input": "carrot",
+      "expectedNum": 0,
+      "expectErr": true
+    },
+    {
+      "input": "35682",
+      "expectedNum": 0,
+      "expectErr": true,
+      "position": "final"
+    }
+  ]
+}
