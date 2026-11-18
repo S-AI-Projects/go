@@ -1,0 +1,162 @@
+{
+  "all_passed": true,
+  "tool_versions": {
+    "python": "3.14.6",
+    "go": "go version go1.27.4 darwin/arm64"
+  },
+  "reference_test": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "returncode": 0,
+    "passed_subtests_count": 26,
+    "passed_subtests": [
+      "TestHey/asking_a_question",
+      "TestHey/shouting",
+      "TestHey/forceful_question",
+      "TestHey/silence",
+      "TestHey/stating_something",
+      "TestHey/asking_a_numeric_question",
+      "TestHey/asking_gibberish",
+      "TestHey/question_with_no_letters",
+      "TestHey/non-letters_with_question",
+      "TestHey/prattling_on",
+      "TestHey/ending_with_whitespace",
+      "TestHey/multiple_line_question",
+      "TestHey/shouting_gibberish",
+      "TestHey/shouting_a_statement_containing_a_question_mark",
+      "TestHey/shouting_numbers",
+      "TestHey/shouting_with_special_characters",
+      "TestHey/shouting_with_no_exclamation_mark",
+      "TestHey/prolonged_silence",
+      "TestHey/alternate_silence",
+      "TestHey/other_whitespace",
+      "TestHey/talking_forcefully",
+      "TestHey/using_acronyms_in_regular_speech",
+      "TestHey/no_letters",
+      "TestHey/statement_containing_question_mark",
+      "TestHey/starting_with_whitespace",
+      "TestHey/non-question_ending_with_whitespace"
+    ],
+    "failed_subtests": []
+  },
+  "mutant_test": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "returncode": 1,
+    "failed_subtests": [
+      "TestHey/question_with_no_letters",
+      "TestHey/non-letters_with_question",
+      "TestHey/no_letters"
+    ],
+    "rejected_named_case": true
+  },
+  "checks": [
+    {
+      "name": "tests_toml_parsed",
+      "passed": true,
+      "expected": "total > 0",
+      "actual": 27,
+      "detail": ""
+    },
+    {
+      "name": "uuid_f7bc4b92-bdff-421e-a238-ae97f230ccac_comment",
+      "passed": true,
+      "expected": "non-empty comment key",
+      "actual": "Validates that non-question remarks without letters default to Whatever rather than shouting; rejects mutants lacking letter-presence checks.",
+      "detail": ""
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "hints_file",
+      "passed": true,
+      "expected": {
+        "has_letters_guidance": true,
+        "has_diagnostic_input": true,
+        "does_not_leak_solution": true
+      },
+      "actual": {
+        "has_letters_guidance": true,
+        "has_diagnostic_input": true,
+        "does_not_leak_solution": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "maintenance_doc",
+      "passed": true,
+      "expected": {
+        "has_rejecting_uuid": true,
+        "has_mutant_code": true,
+        "has_rejected_status": true,
+        "has_reduced_input": true
+      },
+      "actual": {
+        "has_rejecting_uuid": true,
+        "has_mutant_code": true,
+        "has_rejected_status": true,
+        "has_reduced_input": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "reference_go_test_exit_code",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "detail": ""
+    },
+    {
+      "name": "reference_go_test_executed_count",
+      "passed": true,
+      "expected": {
+        "passed_count_gt_zero": true,
+        "failed_count": 0
+      },
+      "actual": {
+        "passed_count": 26,
+        "failed_count": 0
+      },
+      "detail": ""
+    },
+    {
+      "name": "mutant_fails_tests",
+      "passed": true,
+      "expected": "non-zero exit with failing subtests",
+      "actual": "exit=1, failed_count=3",
+      "detail": ""
+    },
+    {
+      "name": "mutant_rejected_by_named_case",
+      "passed": true,
+      "expected": "TestHey/no_letters in failed subtests",
+      "actual": [
+        "TestHey/question_with_no_letters",
+        "TestHey/non-letters_with_question",
+        "TestHey/no_letters"
+      ],
+      "detail": ""
+    }
+  ]
+}

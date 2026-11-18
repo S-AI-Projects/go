@@ -1,0 +1,24 @@
+{
+  "exercise": "exercises/practice/bob",
+  "config_path": "exercises/practice/bob/.meta/config.json",
+  "resolved_files": {
+    "solution": [
+      "bob.go"
+    ],
+    "test": [
+      "bob_test.go",
+      "cases_test.go"
+    ],
+    "example": [
+      ".meta/example.go"
+    ]
+  },
+  "rejecting_uuid": "f7bc4b92-bdff-421e-a238-ae97f230ccac",
+  "toml_summary": {
+    "total": 27,
+    "included": 26,
+    "excluded": 1,
+    "rejecting_uuid": "f7bc4b92-bdff-421e-a238-ae97f230ccac",
+    "rejecting_comment": "Validates that non-question remarks without letters default to Whatever rather than shouting; rejects mutants lacking letter-presence checks."
+  }
+}

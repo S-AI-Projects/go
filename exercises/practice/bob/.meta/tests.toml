@@ -32,6 +32,7 @@ description = "asking gibberish"
 
 [bb0011c5-cd52-4a5b-8bfb-a87b6283b0e2]
 description = "question with no letters"
+comment = "Validates that questions without alphabetic characters are not classified as shouting; rejects mutants lacking letter-presence checks."
 
 [9bfc677d-ea3a-45f2-be44-35bc8fa3753e]
 description = "non-letters with question"
@@ -78,6 +79,7 @@ description = "using acronyms in regular speech"
 
 [f7bc4b92-bdff-421e-a238-ae97f230ccac]
 description = "no letters"
+comment = "Validates that non-question remarks without letters default to Whatever rather than shouting; rejects mutants lacking letter-presence checks."
 
 [aa8097cc-c548-4951-8856-14a404dd236a]
 description = "statement containing question mark"
