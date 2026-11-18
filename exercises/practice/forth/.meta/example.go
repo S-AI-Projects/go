@@ -31,6 +31,20 @@ type operatorTyp struct {
 	id operatorID
 }
 
+// Forth evaluates a sequence of Forth statements and returns the final stack state.
+//
+// Complexity:
+//   - Time Complexity: O(N) where N is the total number of tokens (words and operators)
+//     across all input phrases. Splitting by whitespace via strings.FieldsFunc takes O(L)
+//     where L is the total character length of the input. Each token undergoes O(1) amortized
+//     map lookup in userDefs and builtinOps, and stack operations (push, pop, binary math,
+//     dup, drop, swap, over) execute in O(1) time.
+//   - Space Complexity: O(N + U) where N is the maximum stack depth plus operator list
+//     capacity, and U is the space consumed by user-defined words stored in userDefs.
+//
+// Invariant: Evaluation preserves a single LIFO operand stack; binary operations
+// consume two operands and produce one, while stack operators enforce operand count
+// bounds, returning errNotEnoughOperands if stack depth is insufficient.
 func Forth(input []string) (result []int, err error) {
 	if len(input) == 0 {
 		return []int{}, nil

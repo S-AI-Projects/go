@@ -1,0 +1,41 @@
+{
+  "exercise": "exercises/practice/forth",
+  "config_path": "exercises/practice/forth/.meta/config.json",
+  "resolved_files": {
+    "solution": [
+      "forth.go"
+    ],
+    "test": [
+      "forth_test.go",
+      "cases_test.go"
+    ],
+    "example": [
+      ".meta/example.go"
+    ]
+  },
+  "input_sizes": {
+    "Small": {
+      "tokens": 3,
+      "input": [
+        "1 2 +"
+      ]
+    },
+    "Medium": {
+      "tokens": 9,
+      "input": [
+        "1 2 + 4 * 5 + 3 -"
+      ]
+    },
+    "Large": {
+      "tokens": 27,
+      "input": [
+        "1 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 +"
+      ]
+    }
+  },
+  "toml_summary": {
+    "total": 55,
+    "included": 54,
+    "excluded": 1
+  }
+}

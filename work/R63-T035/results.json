@@ -1,0 +1,205 @@
+{
+  "all_passed": true,
+  "tool_versions": {
+    "python": "3.14.6",
+    "go": "go version go1.27.4 darwin/arm64"
+  },
+  "reference_test": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "returncode": 0,
+    "passed_subtests_count": 54,
+    "passed_subtests": [
+      "TestForth/parsing_and_numbers_->_numbers_just_get_pushed_onto_the_stack",
+      "TestForth/parsing_and_numbers_->_pushes_negative_numbers_onto_the_stack",
+      "TestForth/addition_->_can_add_two_numbers",
+      "TestForth/addition_->_errors_if_there_is_nothing_on_the_stack",
+      "TestForth/addition_->_errors_if_there_is_only_one_value_on_the_stack",
+      "TestForth/addition_->_more_than_two_values_on_the_stack",
+      "TestForth/subtraction_->_can_subtract_two_numbers",
+      "TestForth/subtraction_->_errors_if_there_is_nothing_on_the_stack",
+      "TestForth/subtraction_->_errors_if_there_is_only_one_value_on_the_stack",
+      "TestForth/subtraction_->_more_than_two_values_on_the_stack",
+      "TestForth/multiplication_->_can_multiply_two_numbers",
+      "TestForth/multiplication_->_errors_if_there_is_nothing_on_the_stack",
+      "TestForth/multiplication_->_errors_if_there_is_only_one_value_on_the_stack",
+      "TestForth/multiplication_->_more_than_two_values_on_the_stack",
+      "TestForth/division_->_can_divide_two_numbers",
+      "TestForth/division_->_performs_integer_division",
+      "TestForth/division_->_errors_if_dividing_by_zero",
+      "TestForth/division_->_errors_if_there_is_nothing_on_the_stack",
+      "TestForth/division_->_errors_if_there_is_only_one_value_on_the_stack",
+      "TestForth/division_->_more_than_two_values_on_the_stack",
+      "TestForth/combined_arithmetic_->_addition_and_subtraction",
+      "TestForth/combined_arithmetic_->_multiplication_and_division",
+      "TestForth/combined_arithmetic_->_multiplication_and_addition",
+      "TestForth/combined_arithmetic_->_addition_and_multiplication",
+      "TestForth/dup_->_copies_a_value_on_the_stack",
+      "TestForth/dup_->_copies_the_top_value_on_the_stack",
+      "TestForth/dup_->_errors_if_there_is_nothing_on_the_stack",
+      "TestForth/drop_->_removes_the_top_value_on_the_stack_if_it_is_the_only_one",
+      "TestForth/drop_->_removes_the_top_value_on_the_stack_if_it_is_not_the_only_one",
+      "TestForth/drop_->_errors_if_there_is_nothing_on_the_stack",
+      "TestForth/swap_->_swaps_the_top_two_values_on_the_stack_if_they_are_the_only_ones",
+      "TestForth/swap_->_swaps_the_top_two_values_on_the_stack_if_they_are_not_the_only_ones",
+      "TestForth/swap_->_errors_if_there_is_nothing_on_the_stack",
+      "TestForth/swap_->_errors_if_there_is_only_one_value_on_the_stack",
+      "TestForth/over_->_copies_the_second_element_if_there_are_only_two",
+      "TestForth/over_->_copies_the_second_element_if_there_are_more_than_two",
+      "TestForth/over_->_errors_if_there_is_nothing_on_the_stack",
+      "TestForth/over_->_errors_if_there_is_only_one_value_on_the_stack",
+      "TestForth/user-defined_words_->_can_consist_of_built-in_words",
+      "TestForth/user-defined_words_->_execute_in_the_right_order",
+      "TestForth/user-defined_words_->_can_override_other_user-defined_words",
+      "TestForth/user-defined_words_->_can_override_built-in_words",
+      "TestForth/user-defined_words_->_can_override_built-in_operators",
+      "TestForth/user-defined_words_->_can_use_different_words_with_the_same_name",
+      "TestForth/user-defined_words_->_can_define_word_that_uses_word_with_the_same_name",
+      "TestForth/user-defined_words_->_cannot_redefine_non-negative_numbers",
+      "TestForth/user-defined_words_->_cannot_redefine_negative_numbers",
+      "TestForth/user-defined_words_->_errors_if_executing_a_non-existent_word",
+      "TestForth/case-insensitivity_->_DUP_is_case-insensitive",
+      "TestForth/case-insensitivity_->_DROP_is_case-insensitive",
+      "TestForth/case-insensitivity_->_SWAP_is_case-insensitive",
+      "TestForth/case-insensitivity_->_OVER_is_case-insensitive",
+      "TestForth/case-insensitivity_->_user-defined_words_are_case-insensitive",
+      "TestForth/case-insensitivity_->_definitions_are_case-insensitive"
+    ],
+    "failed_subtests": []
+  },
+  "scaling_results": {
+    "Small": {
+      "tokens": 3,
+      "median_ns": 346,
+      "reps": [
+        308,
+        332,
+        346,
+        353,
+        377
+      ]
+    },
+    "Medium": {
+      "tokens": 9,
+      "median_ns": 795,
+      "reps": [
+        650,
+        659,
+        795,
+        847,
+        1142
+      ]
+    },
+    "Large": {
+      "tokens": 27,
+      "median_ns": 1869,
+      "reps": [
+        1414,
+        1648,
+        1869,
+        1910,
+        1994
+      ]
+    }
+  },
+  "checks": [
+    {
+      "name": "tests_toml_parsed",
+      "passed": true,
+      "expected": "total > 0 and included > 0",
+      "actual": {
+        "total": 55,
+        "included": 54,
+        "excluded": 1
+      },
+      "detail": ""
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "example_complexity_comment",
+      "passed": true,
+      "expected": {
+        "has_time_complexity": true,
+        "has_space_complexity": true,
+        "has_invariant": true
+      },
+      "actual": {
+        "has_time_complexity": true,
+        "has_space_complexity": true,
+        "has_invariant": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "maintenance_doc",
+      "passed": true,
+      "expected": {
+        "has_three_sizes": true,
+        "has_repetitions": true,
+        "has_cost_statement": true,
+        "has_limits": true
+      },
+      "actual": {
+        "has_three_sizes": true,
+        "has_repetitions": true,
+        "has_cost_statement": true,
+        "has_limits": true
+      },
+      "detail": ""
+    },
+    {
+      "name": "reference_go_test_exit_code",
+      "passed": true,
+      "expected": 0,
+      "actual": 0,
+      "detail": ""
+    },
+    {
+      "name": "reference_go_test_executed_count",
+      "passed": true,
+      "expected": {
+        "passed_count_gt_zero": true,
+        "failed_count": 0
+      },
+      "actual": {
+        "passed_count": 54,
+        "failed_count": 0
+      },
+      "detail": ""
+    },
+    {
+      "name": "scaling_study_measurements",
+      "passed": true,
+      "expected": {
+        "three_sizes_measured": true,
+        "returncode": 0
+      },
+      "actual": {
+        "measured_sizes": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "returncode": 0
+      },
+      "detail": ""
+    }
+  ]
+}
