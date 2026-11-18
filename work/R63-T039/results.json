@@ -1,0 +1,118 @@
+{
+  "task": "R63-T039",
+  "timestamp": "2026-11-18T10:32:37.603210+00:00",
+  "all_passed": true,
+  "outcomes": [
+    {
+      "name": "maintenance_doc_content",
+      "passed": true,
+      "expected": {
+        "command": true,
+        "requirements": true,
+        "hashing": true
+      },
+      "actual": {
+        "command": true,
+        "requirements": true,
+        "hashing": true
+      },
+      "detail": "Maintenance doc details command, tool requirements, and hash integrity"
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": "Learner stub in the working tree is unchanged and unsolved (panics)"
+    },
+    {
+      "name": "scenario_real_reference_passes",
+      "passed": true,
+      "expected": {
+        "exit_code": 0,
+        "tests_passed": true,
+        "zero_tests": false,
+        "hashes_preserved": true
+      },
+      "actual": {
+        "exit_code": 0,
+        "tests_passed": true,
+        "zero_tests": false,
+        "hashes_preserved": true
+      },
+      "detail": "Real reference succeeds in isolation and preserves all learner files"
+    },
+    {
+      "name": "scenario_failing_reference_fails",
+      "passed": true,
+      "expected": {
+        "non_zero_exit": true,
+        "tests_passed": false,
+        "hashes_preserved": true
+      },
+      "actual": {
+        "exit_code": 1,
+        "tests_passed": false,
+        "hashes_preserved": true
+      },
+      "detail": "Deliberately failing reference produces non-zero exit and preserves hashes"
+    },
+    {
+      "name": "scenario_zero_test_detected",
+      "passed": true,
+      "expected": {
+        "zero_tests": true,
+        "hashes_preserved": true
+      },
+      "actual": {
+        "zero_tests": true,
+        "hashes_preserved": true
+      },
+      "detail": "Empty test selection correctly detected as zero-test run while preserving hashes"
+    },
+    {
+      "name": "overall_learner_files_unmodified",
+      "passed": true,
+      "expected": true,
+      "actual": true,
+      "detail": "Learner file hashes are 100% identical before and after all test scenarios"
+    }
+  ],
+  "scenarios": {
+    "real_reference": {
+      "exit_code": 0,
+      "tests_passed": true,
+      "zero_tests": false,
+      "hashes_preserved": true
+    },
+    "failing_reference": {
+      "exit_code": 1,
+      "tests_passed": false,
+      "zero_tests": true,
+      "hashes_preserved": true
+    },
+    "empty_selection": {
+      "exit_code": 0,
+      "zero_tests": true,
+      "hashes_preserved": true
+    }
+  },
+  "stub_info": {
+    "is_unsolved": true,
+    "differs_from_example": true
+  },
+  "doc_info": {
+    "path": "/Users/darshilsachingunjal/turing/go/docs/maintenance/accumulate.md",
+    "exists": true,
+    "byte_length": 2074,
+    "has_command": true,
+    "has_requirements": true,
+    "has_hashing": true
+  }
+}
