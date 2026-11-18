@@ -1,0 +1,116 @@
+{
+  "task": "R63-T040",
+  "timestamp": "2026-11-18T10:37:25.349857+00:00",
+  "all_passed": true,
+  "outcomes": [
+    {
+      "name": "tests_toml_cases",
+      "passed": true,
+      "expected": {
+        "total": 11,
+        "included": 11
+      },
+      "actual": {
+        "total": 11,
+        "included": 11
+      },
+      "detail": "All 11 canonical test cases verified in tests.toml"
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": "Learner stub in the working tree is unchanged and unsolved (panics)"
+    },
+    {
+      "name": "hints_decision_table_present",
+      "passed": true,
+      "expected": true,
+      "actual": true,
+      "detail": "hints.md contains a decision table mapping inputs to expected outputs"
+    },
+    {
+      "name": "hints_covers_subtle_cases",
+      "passed": true,
+      "expected": {
+        "subtle_16": true,
+        "subtle_24": true,
+        "subtle_0": true
+      },
+      "actual": {
+        "subtle_16": true,
+        "subtle_24": true,
+        "subtle_0": true
+      },
+      "detail": "hints.md explains subtle cases: 16 (empty reverse), 24 (single action reverse), and 0 (zero input)"
+    },
+    {
+      "name": "hints_unspecified_statement",
+      "passed": true,
+      "expected": true,
+      "actual": true,
+      "detail": "hints.md includes an explicit statement separating specified from unspecified behavior"
+    },
+    {
+      "name": "reference_tests_pass",
+      "passed": true,
+      "expected": {
+        "exit_code": 0,
+        "passed_gt_zero": true,
+        "failed": 0
+      },
+      "actual": {
+        "exit_code": 0,
+        "passed": 11,
+        "failed": 0
+      },
+      "detail": "Reference implementation passes all enabled test cases"
+    }
+  ],
+  "test_info": {
+    "command": [
+      "go",
+      "test",
+      "-v",
+      "-count=1",
+      "./..."
+    ],
+    "exit_code": 0,
+    "passed_count": 11,
+    "passed_tests": [
+      "TestHandshake/wink_for_1",
+      "TestHandshake/double_blink_for_10",
+      "TestHandshake/close_your_eyes_for_100",
+      "TestHandshake/jump_for_1000",
+      "TestHandshake/combine_two_actions",
+      "TestHandshake/reverse_two_actions",
+      "TestHandshake/reversing_one_action_gives_the_same_action",
+      "TestHandshake/reversing_no_actions_still_gives_no_actions",
+      "TestHandshake/all_possible_actions",
+      "TestHandshake/reverse_all_possible_actions",
+      "TestHandshake/do_nothing_for_zero"
+    ],
+    "failed_count": 0
+  },
+  "stub_info": {
+    "is_unsolved": true,
+    "differs_from_example": true
+  },
+  "hints_info": {
+    "path": "/Users/darshilsachingunjal/turing/go/exercises/practice/secret-handshake/.docs/hints.md",
+    "exists": true,
+    "byte_length": 2396,
+    "has_decision_table": true,
+    "has_subtle_16": true,
+    "has_subtle_24": true,
+    "has_subtle_0": true,
+    "has_unspecified_statement": true
+  }
+}

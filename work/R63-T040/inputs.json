@@ -1,0 +1,207 @@
+{
+  "task": "R63-T040",
+  "exercise": "secret-handshake",
+  "timestamp": "2026-11-18T10:37:25.348950+00:00",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "resolved_files": {
+    "solution": [
+      "secret_handshake.go"
+    ],
+    "test": [
+      "secret_handshake_test.go",
+      "cases_test.go"
+    ],
+    "example": [
+      ".meta/example.go"
+    ]
+  },
+  "canonical_tests": {
+    "total": 11,
+    "included": {
+      "b8496fbd-6778-468c-8054-648d03c4bb23": {
+        "include": true,
+        "description": "wink for 1"
+      },
+      "83ec6c58-81a9-4fd1-bfaf-0160514fc0e3": {
+        "include": true,
+        "description": "double blink for 10"
+      },
+      "0e20e466-3519-4134-8082-5639d85fef71": {
+        "include": true,
+        "description": "close your eyes for 100"
+      },
+      "b339ddbb-88b7-4b7d-9b19-4134030d9ac0": {
+        "include": true,
+        "description": "jump for 1000"
+      },
+      "40499fb4-e60c-43d7-8b98-0de3ca44e0eb": {
+        "include": true,
+        "description": "combine two actions"
+      },
+      "9730cdd5-ef27-494b-afd3-5c91ad6c3d9d": {
+        "include": true,
+        "description": "reverse two actions"
+      },
+      "0b828205-51ca-45cd-90d5-f2506013f25f": {
+        "include": true,
+        "description": "reversing one action gives the same action"
+      },
+      "9949e2ac-6c9c-4330-b685-2089ab28b05f": {
+        "include": true,
+        "description": "reversing no actions still gives no actions"
+      },
+      "23fdca98-676b-4848-970d-cfed7be39f81": {
+        "include": true,
+        "description": "all possible actions"
+      },
+      "ae8fe006-d910-4d6f-be00-54b7c3799e79": {
+        "include": true,
+        "description": "reverse all possible actions"
+      },
+      "3d36da37-b31f-4cdb-a396-d93a2ee1c4a5": {
+        "include": true,
+        "description": "do nothing for zero"
+      }
+    },
+    "excluded": {}
+  },
+  "decision_table": [
+    {
+      "input": 0,
+      "binary": "00000",
+      "bits": [],
+      "reverse": false,
+      "expected": []
+    },
+    {
+      "input": 1,
+      "binary": "00001",
+      "bits": [
+        1
+      ],
+      "reverse": false,
+      "expected": [
+        "wink"
+      ]
+    },
+    {
+      "input": 2,
+      "binary": "00010",
+      "bits": [
+        2
+      ],
+      "reverse": false,
+      "expected": [
+        "double blink"
+      ]
+    },
+    {
+      "input": 4,
+      "binary": "00100",
+      "bits": [
+        4
+      ],
+      "reverse": false,
+      "expected": [
+        "close your eyes"
+      ]
+    },
+    {
+      "input": 8,
+      "binary": "01000",
+      "bits": [
+        8
+      ],
+      "reverse": false,
+      "expected": [
+        "jump"
+      ]
+    },
+    {
+      "input": 3,
+      "binary": "00011",
+      "bits": [
+        1,
+        2
+      ],
+      "reverse": false,
+      "expected": [
+        "wink",
+        "double blink"
+      ]
+    },
+    {
+      "input": 15,
+      "binary": "01111",
+      "bits": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "reverse": false,
+      "expected": [
+        "wink",
+        "double blink",
+        "close your eyes",
+        "jump"
+      ]
+    },
+    {
+      "input": 16,
+      "binary": "10000",
+      "bits": [
+        16
+      ],
+      "reverse": true,
+      "expected": []
+    },
+    {
+      "input": 19,
+      "binary": "10011",
+      "bits": [
+        1,
+        2,
+        16
+      ],
+      "reverse": true,
+      "expected": [
+        "double blink",
+        "wink"
+      ]
+    },
+    {
+      "input": 24,
+      "binary": "11000",
+      "bits": [
+        8,
+        16
+      ],
+      "reverse": true,
+      "expected": [
+        "jump"
+      ]
+    },
+    {
+      "input": 31,
+      "binary": "11111",
+      "bits": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "reverse": true,
+      "expected": [
+        "jump",
+        "close your eyes",
+        "double blink",
+        "wink"
+      ]
+    }
+  ]
+}
