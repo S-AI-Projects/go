@@ -1,0 +1,171 @@
+{
+  "task": "R63-T036",
+  "timestamp": "2026-11-18T10:01:33.238547+00:00",
+  "all_passed": true,
+  "outcomes": [
+    {
+      "name": "tests_toml_cases",
+      "passed": true,
+      "expected": {
+        "total": 3,
+        "included": 3
+      },
+      "actual": {
+        "total": 3,
+        "included": 3
+      },
+      "detail": "All canonical test cases verified in tests.toml"
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "passed": true,
+      "expected": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "actual": {
+        "is_unsolved": true,
+        "differs_from_example": true
+      },
+      "detail": "Learner stub in the working tree is unchanged and unsolved"
+    },
+    {
+      "name": "hints_approach_selection_present",
+      "passed": true,
+      "expected": true,
+      "actual": true,
+      "detail": "hints.md contains an Approach Selection section"
+    },
+    {
+      "name": "hints_explains_both_approaches",
+      "passed": true,
+      "expected": {
+        "concat": true,
+        "sprintf": true
+      },
+      "actual": {
+        "concat": true,
+        "sprintf": true
+      },
+      "detail": "hints.md explains string concatenation and fmt.Sprintf"
+    },
+    {
+      "name": "hints_covers_tradeoffs_and_example",
+      "passed": true,
+      "expected": {
+        "tradeoffs": true,
+        "worked_example": true,
+        "avoids_full_solution": true
+      },
+      "actual": {
+        "tradeoffs": true,
+        "worked_example": true,
+        "avoids_full_solution": true
+      },
+      "detail": "hints.md justifies trade-offs and includes worked input without full solution code"
+    },
+    {
+      "name": "reference_tests_pass",
+      "passed": true,
+      "expected": {
+        "exit_code": 0,
+        "passed_gt_zero": true,
+        "failed": 0
+      },
+      "actual": {
+        "exit_code": 0,
+        "passed": 3,
+        "failed": 0
+      },
+      "detail": "Reference implementation passes all enabled test cases"
+    },
+    {
+      "name": "alternative_tests_pass",
+      "passed": true,
+      "expected": {
+        "exit_code": 0,
+        "passed_gt_zero": true,
+        "failed": 0
+      },
+      "actual": {
+        "exit_code": 0,
+        "passed": 3,
+        "failed": 0
+      },
+      "detail": "Alternative fmt.Sprintf implementation passes all enabled test cases"
+    },
+    {
+      "name": "benchmarks_completed",
+      "passed": true,
+      "expected": {
+        "both_benchmarked": true
+      },
+      "actual": {
+        "ref": {
+          "iterations": 22095801,
+          "ns_per_op": 53.92,
+          "bytes_per_op": 0,
+          "allocs_per_op": 0
+        },
+        "alt": {
+          "iterations": 5837020,
+          "ns_per_op": 219.6,
+          "bytes_per_op": 128,
+          "allocs_per_op": 6
+        }
+      },
+      "detail": "Benchmarked both reference and alternative implementations"
+    }
+  ],
+  "test_info": {
+    "reference": {
+      "exit_code": 0,
+      "passed_count": 3,
+      "passed_tests": [
+        "TestShareWith/no_name_given",
+        "TestShareWith/a_name_given",
+        "TestShareWith/another_name_given"
+      ],
+      "failed_count": 0
+    },
+    "alternative": {
+      "exit_code": 0,
+      "passed_count": 3,
+      "passed_tests": [
+        "TestShareWith/no_name_given",
+        "TestShareWith/a_name_given",
+        "TestShareWith/another_name_given"
+      ],
+      "failed_count": 0
+    }
+  },
+  "benchmarks": {
+    "reference_concat": {
+      "iterations": 22095801,
+      "ns_per_op": 53.92,
+      "bytes_per_op": 0,
+      "allocs_per_op": 0
+    },
+    "alternative_sprintf": {
+      "iterations": 5837020,
+      "ns_per_op": 219.6,
+      "bytes_per_op": 128,
+      "allocs_per_op": 6
+    }
+  },
+  "stub_info": {
+    "is_unsolved": true,
+    "differs_from_example": true
+  },
+  "hints_info": {
+    "path": "/Users/darshilsachingunjal/turing/go/exercises/practice/two-fer/.docs/hints.md",
+    "exists": true,
+    "byte_length": 1837,
+    "has_approach_section": true,
+    "has_concat_explanation": true,
+    "has_sprintf_explanation": true,
+    "has_tradeoffs": true,
+    "has_worked_example": true,
+    "no_full_solution": true
+  }
+}

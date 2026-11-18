@@ -1,0 +1,41 @@
+{
+  "task": "R63-T036",
+  "exercise": "two-fer",
+  "timestamp": "2026-11-18T10:01:33.237488+00:00",
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python": "3.14.6 (v3.14.6:c63aec69bd5, Jun 10 2026, 08:07:54) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "resolved_files": {
+    "solution": [
+      "two_fer.go"
+    ],
+    "test": [
+      "two_fer_test.go",
+      "cases_test.go"
+    ],
+    "example": [
+      ".meta/example.go"
+    ]
+  },
+  "canonical_tests": {
+    "total": 3,
+    "included": {
+      "1cf3e15a-a3d7-4a87-aeb3-ba1b43bc8dce": {
+        "include": true,
+        "description": "no name given"
+      },
+      "b4c6dbb8-b4fb-42c2-bafd-10785abe7709": {
+        "include": true,
+        "description": "a name given"
+      },
+      "3549048d-1a6e-4653-9a79-b0bda163e8d5": {
+        "include": true,
+        "description": "another name given"
+      }
+    },
+    "excluded": {}
+  },
+  "reference_source": "package twofer\n\n// ShareWith apportions the goods between two people using string concatenation.\nfunc ShareWith(name string) string {\n\tif name == \"\" {\n\t\tname = \"you\"\n\t}\n\treturn \"One for \" + name + \", one for me.\"\n}\n",
+  "alternative_source": "package twofer\n\nimport \"fmt\"\n\n// ShareWith apportions the goods between two people using fmt.Sprintf.\nfunc ShareWith(name string) string {\n\tif name == \"\" {\n\t\tname = \"you\"\n\t}\n\treturn fmt.Sprintf(\"One for %s, one for me.\", name)\n}\n"
+}
