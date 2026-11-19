@@ -40,9 +40,12 @@ description = "twelfth day twelve drummers drumming"
 
 [da8b9013-b1e8-49df-b6ef-ddec0219e398]
 description = "recites first three verses of the song"
+comment = "This multi verse case has startVerse 1 and endVerse 3. In gen.go, the template only keeps single verses where startVerse equals endVerse for testCases, and verses 1 to 12 for the song. Because startVerse is 1 and endVerse is 3, gen.go filters this case out so it is not in cases_test.go."
 
 [c095af0d-3137-4653-ad32-bfb899eda24c]
 description = "recites three verses from the middle of the song"
+comment = "This multi verse case has startVerse 4 and endVerse 6. In gen.go, the template only includes single verses where startVerse equals endVerse for testCases, and verses 1 to 12 for the song. Because startVerse is 4 and endVerse is 6, gen.go filters this case out so it is not in cases_test.go."
 
 [20921bc9-cc52-4627-80b3-198cbbfcf9b7]
 description = "recites the whole song"
+comment = "This case recites the full song from verse 1 to 12. In gen.go, the template checks if startVerse equals 1 and endVerse equals 12. It takes the expected verses from this case and writes them to the song variable in cases_test.go, which is tested by TestSong."

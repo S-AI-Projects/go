@@ -1,0 +1,42 @@
+{
+  "task_id": "R63-T042",
+  "exercise": "exercises/practice/twelve-days",
+  "tool_versions": {
+    "go": "go version go1.27.3 darwin/arm64",
+    "python": "3.9.6 (default, Aug 25 2026, 21:26:21)  [Clang 21.0.0 (clang-2100.3.34.2)]"
+  },
+  "tests_toml": {
+    "total_cases": 15,
+    "multi_verse_cases": [
+      "da8b9013-b1e8-49df-b6ef-ddec0219e398",
+      "c095af0d-3137-4653-ad32-bfb899eda24c",
+      "20921bc9-cc52-4627-80b3-198cbbfcf9b7"
+    ]
+  },
+  "reproducibility_check": {
+    "status": "PASS",
+    "exit_code": 0
+  },
+  "learner_stub_unsolved": true,
+  "test_results": {
+    "exit_code": 0,
+    "pass_count": 14,
+    "tests": [
+      "--- PASS: TestVerse (0.00s)",
+      "--- PASS: TestVerse/first_day_a_partridge_in_a_pear_tree (0.00s)",
+      "--- PASS: TestVerse/second_day_two_turtle_doves (0.00s)",
+      "--- PASS: TestVerse/third_day_three_french_hens (0.00s)",
+      "--- PASS: TestVerse/fourth_day_four_calling_birds (0.00s)",
+      "--- PASS: TestVerse/fifth_day_five_gold_rings (0.00s)",
+      "--- PASS: TestVerse/sixth_day_six_geese-a-laying (0.00s)",
+      "--- PASS: TestVerse/seventh_day_seven_swans-a-swimming (0.00s)",
+      "--- PASS: TestVerse/eighth_day_eight_maids-a-milking (0.00s)",
+      "--- PASS: TestVerse/ninth_day_nine_ladies_dancing (0.00s)",
+      "--- PASS: TestVerse/tenth_day_ten_lords-a-leaping (0.00s)",
+      "--- PASS: TestVerse/eleventh_day_eleven_pipers_piping (0.00s)",
+      "--- PASS: TestVerse/twelfth_day_twelve_drummers_drumming (0.00s)",
+      "--- PASS: TestSong (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
