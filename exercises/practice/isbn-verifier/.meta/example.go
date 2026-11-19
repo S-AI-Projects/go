@@ -7,6 +7,18 @@ import (
 	"unicode"
 )
 
+// IsValidISBN verifies whether a string represents a valid ISBN-10 number.
+//
+// Complexity:
+//   - Time Complexity: O(L) where L is the character length of the input string.
+//     Because valid ISBN-10 representations have a fixed bounded length (10 digits
+//     and at most a few hyphens, typically L <= 13), the execution time is strictly
+//     O(1) constant time with respect to the input domain.
+//   - Space Complexity: O(1) auxiliary space, allocating a fixed slice of 10 integers
+//     for the digits and small string buffers.
+//
+// Invariant: An ISBN-10 must contain exactly 10 digits (where 'X' can only be the
+// 10th check digit representing the value 10) such that the weighted sum modulo 11 equals 0.
 func IsValidISBN(isbn string) bool {
 	isbn = dropHyphen(isbn)
 
