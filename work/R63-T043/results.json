@@ -1,0 +1,44 @@
+{
+  "task_id": "R63-T043",
+  "exercise": "exercises/practice/reverse-string",
+  "tool_versions": {
+    "go": "go version go1.27.3 darwin/arm64",
+    "python": "3.9.6 (default, Aug 25 2026, 21:26:21)  [Clang 21.0.0 (clang-2100.3.34.2)]"
+  },
+  "tests_toml": {
+    "target_uuid": "1bed0f8a-13b0-4bd3-9d59-3d0593326fa2",
+    "target_description": "wide characters",
+    "comment": "This test verifies multi byte characters and rejects byte level reversal mutants."
+  },
+  "learner_stub_unsolved": true,
+  "reference_run": {
+    "exit_code": 0,
+    "pass_count": 11,
+    "passed_tests": [
+      "--- PASS: TestReverse (0.00s)",
+      "--- PASS: TestReverse/an_empty_string (0.00s)",
+      "--- PASS: TestReverse/a_word (0.00s)",
+      "--- PASS: TestReverse/a_capitalized_word (0.00s)",
+      "--- PASS: TestReverse/a_sentence_with_punctuation (0.00s)",
+      "--- PASS: TestReverse/a_palindrome (0.00s)",
+      "--- PASS: TestReverse/an_even-sized_word (0.00s)",
+      "--- PASS: TestReverse/wide_characters (0.00s)",
+      "--- PASS: TestReverseMultibyte (0.00s)",
+      "--- PASS: TestReverseMultibyte/a_multi-byte_test_case (0.00s)",
+      "--- PASS: TestReverseOfReverse (0.00s)"
+    ]
+  },
+  "mutant_run": {
+    "exit_code": 1,
+    "failed_as_expected": true,
+    "rejecting_case": "wide characters (1bed0f8a-13b0-4bd3-9d59-3d0593326fa2)",
+    "pass_count": 7,
+    "failure_details": [
+      "=== RUN   TestReverse/wide_characters",
+      "    reverse_string_test.go:12: Reverse(\"\u5b50\u732b\") = \"\\xab\\x8c\u742d\\xe5\", want: \"\u732b\u5b50\"",
+      "    --- FAIL: TestReverse/wide_characters (0.00s)",
+      "    reverse_string_test.go:22: Reverse(\"Hello, \u4e16\u754c\") = \"\\x8c\\x95\u75b8\\xe4 ,olleH\", want: \"\u754c\u4e16 ,olleH\""
+    ]
+  },
+  "status": "PASS"
+}
