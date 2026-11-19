@@ -11,12 +11,15 @@
 
 [163e8e86-7bfd-4ee2-bd68-d083dc3381a3]
 description = "Perfect numbers -> Smallest perfect number is classified correctly"
+comment = "This test checks the number 6 in TestClassifiesCorrectly. The factors of 6 are 1, 2, and 3. Their sum is 6, which equals the number itself. The Go function Classify returns ClassificationPerfect."
 
 [169a7854-0431-4ae0-9815-c3b6d967436d]
 description = "Perfect numbers -> Medium perfect number is classified correctly"
+comment = "This test checks the number 28 in TestClassifiesCorrectly. The factors of 28 are 1, 2, 4, 7, and 14. Their sum is 28, which equals the number itself. The Go function Classify returns ClassificationPerfect."
 
 [ee3627c4-7b36-4245-ba7c-8727d585f402]
 description = "Perfect numbers -> Large perfect number is classified correctly"
+comment = "This test checks the large number 33550336 in TestClassifiesCorrectly. The sum of all its factors equals 33550336. Since the factor sum equals the number, the Go function Classify returns ClassificationPerfect."
 
 [80ef7cf8-9ea8-49b9-8b2d-d9cb3db3ed7e]
 description = "Abundant numbers -> Smallest abundant number is classified correctly"

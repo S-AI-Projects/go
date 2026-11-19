@@ -1,0 +1,42 @@
+{
+  "task_id": "R63-T041",
+  "exercise": "exercises/practice/perfect-numbers",
+  "tool_versions": {
+    "go": "go version go1.27.3 darwin/arm64",
+    "python": "3.9.6 (default, Aug 25 2026, 21:26:21)  [Clang 21.0.0 (clang-2100.3.34.2)]"
+  },
+  "tests_toml": {
+    "total_cases": 14,
+    "excluded_cases": 0,
+    "target_uuids_checked": [
+      "163e8e86-7bfd-4ee2-bd68-d083dc3381a3",
+      "169a7854-0431-4ae0-9815-c3b6d967436d",
+      "ee3627c4-7b36-4245-ba7c-8727d585f402"
+    ]
+  },
+  "learner_stub_unsolved": true,
+  "test_results": {
+    "exit_code": 0,
+    "pass_count": 17,
+    "tests": [
+      "--- PASS: TestZeroGivesPositiveRequiredError (0.00s)",
+      "--- PASS: TestClassifiesCorrectly (0.07s)",
+      "--- PASS: TestClassifiesCorrectly/Smallest_perfect_number_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Medium_perfect_number_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Large_perfect_number_is_classified_correctly (0.04s)",
+      "--- PASS: TestClassifiesCorrectly/Smallest_abundant_number_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Medium_abundant_number_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Large_abundant_number_is_classified_correctly (0.01s)",
+      "--- PASS: TestClassifiesCorrectly/Perfect_square_abundant_number_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Smallest_prime_deficient_number_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Smallest_non-prime_deficient_number_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Medium_deficient_number_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Large_deficient_number_is_classified_correctly (0.02s)",
+      "--- PASS: TestClassifiesCorrectly/Edge_case_(no_factors_other_than_itself)_is_classified_correctly (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Zero_is_rejected_(as_it_is_not_a_positive_integer) (0.00s)",
+      "--- PASS: TestClassifiesCorrectly/Negative_integer_is_rejected_(as_it_is_not_a_positive_integer) (0.00s)",
+      "--- PASS: TestClassificationsNotEqual (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
