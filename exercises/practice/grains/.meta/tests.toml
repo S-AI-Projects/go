@@ -22,6 +22,7 @@ description = "32"
 
 [c73b470a-5efb-4d53-9ac6-c5f6487f227b]
 description = "64"
+comment = "Tests the upper boundary of the chessboard (square 64) which equals 2^63 (1 << 63)."
 
 [1d47d832-3e85-4974-9466-5bd35af484e3]
 description = "square 0 raises an exception"
@@ -34,3 +35,4 @@ description = "square greater than 64 raises an exception"
 
 [6eb07385-3659-4b45-a6be-9dc474222750]
 description = "returns the total number of grains on the board"
+comment = "Tests the sum of all 64 squares which equals 2^64 - 1, representing the maximum value of uint64."
