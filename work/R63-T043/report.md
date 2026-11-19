@@ -77,7 +77,7 @@ Failure output from test run:
 === RUN   TestReverseOfReverse
 --- PASS: TestReverseOfReverse (0.00s)
 FAIL
-FAIL	reversestring	0.357s
+FAIL	reversestring	0.365s
 FAIL
 ```
 
