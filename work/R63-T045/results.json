@@ -1,0 +1,71 @@
+{
+  "task_id": "R63-T045",
+  "exercise": "exercises/practice/isbn-verifier",
+  "tool_versions": {
+    "go": "go version go1.27.3 darwin/arm64",
+    "python": "3.9.6 (default, Aug 25 2026, 21:26:21)  [Clang 21.0.0 (clang-2100.3.34.2)]"
+  },
+  "stub_unsolved": true,
+  "complexity_comment_checked": true,
+  "test_results": {
+    "returncode": 0,
+    "passed_tests_count": 22,
+    "passed_tests": [
+      "--- PASS: TestIsValidISBN (0.00s)",
+      "--- PASS: TestIsValidISBN/valid_isbn (0.00s)",
+      "--- PASS: TestIsValidISBN/invalid_isbn_check_digit (0.00s)",
+      "--- PASS: TestIsValidISBN/valid_isbn_with_a_check_digit_of_10 (0.00s)",
+      "--- PASS: TestIsValidISBN/check_digit_is_a_character_other_than_X (0.00s)",
+      "--- PASS: TestIsValidISBN/invalid_check_digit_in_isbn_is_not_treated_as_zero (0.00s)",
+      "--- PASS: TestIsValidISBN/invalid_character_in_isbn_is_not_treated_as_zero (0.00s)",
+      "--- PASS: TestIsValidISBN/X_is_only_valid_as_a_check_digit (0.00s)",
+      "--- PASS: TestIsValidISBN/only_one_check_digit_is_allowed (0.00s)",
+      "--- PASS: TestIsValidISBN/X_is_not_substituted_by_the_value_10 (0.00s)",
+      "--- PASS: TestIsValidISBN/valid_isbn_without_separating_dashes (0.00s)",
+      "--- PASS: TestIsValidISBN/isbn_without_separating_dashes_and_X_as_check_digit (0.00s)",
+      "--- PASS: TestIsValidISBN/isbn_without_check_digit_and_dashes (0.00s)",
+      "--- PASS: TestIsValidISBN/too_long_isbn_and_no_dashes (0.00s)",
+      "--- PASS: TestIsValidISBN/too_short_isbn (0.00s)",
+      "--- PASS: TestIsValidISBN/isbn_without_check_digit (0.00s)",
+      "--- PASS: TestIsValidISBN/check_digit_of_X_should_not_be_used_for_0 (0.00s)",
+      "--- PASS: TestIsValidISBN/empty_isbn (0.00s)",
+      "--- PASS: TestIsValidISBN/input_is_9_characters (0.00s)",
+      "--- PASS: TestIsValidISBN/invalid_characters_are_not_ignored_after_checking_length (0.00s)",
+      "--- PASS: TestIsValidISBN/invalid_characters_are_not_ignored_before_checking_length (0.00s)",
+      "--- PASS: TestIsValidISBN/input_is_too_long_but_contains_a_valid_isbn (0.00s)"
+    ]
+  },
+  "measurements": {
+    "Compact_10chars": {
+      "reps_ns": [
+        351,
+        282,
+        265,
+        263,
+        260
+      ],
+      "median_ns": 265
+    },
+    "Standard_13chars": {
+      "reps_ns": [
+        264,
+        265,
+        260,
+        262,
+        264
+      ],
+      "median_ns": 264
+    },
+    "CheckDigitX_13chars": {
+      "reps_ns": [
+        258,
+        260,
+        259,
+        260,
+        260
+      ],
+      "median_ns": 260
+    }
+  },
+  "status": "PASS"
+}
