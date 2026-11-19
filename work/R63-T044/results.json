@@ -1,0 +1,26 @@
+{
+  "task_id": "R63-T044",
+  "exercise": "exercises/practice/resistor-color-duo",
+  "tool_versions": {
+    "go": "go version go1.27.3 darwin/arm64",
+    "python": "3.9.6 (default, Aug 25 2026, 21:26:21)  [Clang 21.0.0 (clang-2100.3.34.2)]"
+  },
+  "tests_toml_checked": true,
+  "refactor_checked": true,
+  "stub_unsolved": true,
+  "test_results": {
+    "returncode": 0,
+    "passed_tests_count": 8,
+    "passed_tests": [
+      "--- PASS: TestValue (0.00s)",
+      "--- PASS: TestValue/Brown_and_black (0.00s)",
+      "--- PASS: TestValue/Blue_and_grey (0.00s)",
+      "--- PASS: TestValue/Yellow_and_violet (0.00s)",
+      "--- PASS: TestValue/White_and_red (0.00s)",
+      "--- PASS: TestValue/Orange_and_orange (0.00s)",
+      "--- PASS: TestValue/Ignore_additional_colors (0.00s)",
+      "--- PASS: TestValue/Black_and_brown,_one-digit (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
