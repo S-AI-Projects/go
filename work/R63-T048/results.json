@@ -1,0 +1,50 @@
+{
+  "task_id": "R63-T048",
+  "exercise": "exercises/practice/triangle",
+  "tool_versions": {
+    "go": "go version go1.27.3 darwin/arm64",
+    "python": "3.9.6 (default, Aug 25 2026, 21:26:21)  [Clang 21.0.0 (clang-2100.3.34.2)]"
+  },
+  "stub_unsolved": true,
+  "real_config_passed": true,
+  "fixtures": {
+    "missing_reference": {
+      "ok": false,
+      "msg": "Declared file does not exist in 'example': .meta/nonexistent.go"
+    },
+    "missing_test": {
+      "ok": false,
+      "msg": "Declared file does not exist in 'test': missing_triangle_test.go"
+    },
+    "outside_traversal": {
+      "ok": false,
+      "msg": "Path traversal rejected in 'example': ../grains/.meta/example.go"
+    }
+  },
+  "test_results": {
+    "exit_code": 0,
+    "passed_tests_count": 19,
+    "passed_tests": [
+      "--- PASS: TestKindsNotEqual (0.00s)",
+      "--- PASS: TestKind (0.00s)",
+      "--- PASS: TestKind/same_length_(2) (0.00s)",
+      "--- PASS: TestKind/same_length_(10) (0.00s)",
+      "--- PASS: TestKind/b_=_c_=_4 (0.00s)",
+      "--- PASS: TestKind/a_=_c_=_4 (0.00s)",
+      "--- PASS: TestKind/a_=_b_=_4 (0.00s)",
+      "--- PASS: TestKind/a_=_b_=_10 (0.00s)",
+      "--- PASS: TestKind/no_sides_equal_(3,_4,_5) (0.00s)",
+      "--- PASS: TestKind/no_sides_equal_(10,_11,_12) (0.00s)",
+      "--- PASS: TestKind/no_sides_equal_(5,_4,_2) (0.00s)",
+      "--- PASS: TestKind/no_sides_equal_(0.4,_0.6,_0.3) (0.00s)",
+      "--- PASS: TestKind/no_sides_equal_(5,_4,_6)_|_2a=b+c (0.00s)",
+      "--- PASS: TestKind/no_sides_equal_(6,_4,_5)_|_2c=a+b (0.00s)",
+      "--- PASS: TestKind/all_sides_zero (0.00s)",
+      "--- PASS: TestKind/negative_length (0.00s)",
+      "--- PASS: TestKind/not_a_triangle_(1,_1,_3) (0.00s)",
+      "--- PASS: TestKind/not_a_triangle_(2,_5,_2) (0.00s)",
+      "--- PASS: TestKind/not_a_triangle_(7,_3,_2) (0.00s)"
+    ]
+  },
+  "status": "PASS"
+}
