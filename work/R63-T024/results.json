@@ -1,0 +1,83 @@
+{
+  "task": "R63-T024",
+  "exercise": "ledger",
+  "checks": [
+    {
+      "name": "path_resolution",
+      "status": "PASS",
+      "resolved": {
+        "solution": "ledger.go",
+        "example": ".meta/example.go",
+        "tests": [
+          "ledger_test.go",
+          "cases_test.go"
+        ]
+      }
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "status": "PASS",
+      "details": "ledger.go in working tree is untouched and retains starter exercise code"
+    },
+    {
+      "name": "refactored_reference_test_execution",
+      "status": "PASS",
+      "executed_cases_count": 20,
+      "return_code": 0,
+      "passed_subtests": [
+        "",
+        "empty_ledger",
+        "one_entry",
+        "credit_and_debit",
+        "final_order_tie_breaker_is_change",
+        "overlong_description_is_truncated",
+        "euros",
+        "Dutch_locale",
+        "Dutch_locale_and_euros",
+        "Dutch_negative_number_with_3_digits_before_decimal_point",
+        "American_negative_number_with_3_digits_before_decimal_point",
+        "multiple_entries_on_same_date_ordered_by_description",
+        "",
+        "empty_currency",
+        "invalid_currency",
+        "empty_locale",
+        "invalid_locale",
+        "invalid_date_(way_too_high_month)",
+        "invalid_date_(wrong_separator)",
+        ""
+      ]
+    },
+    {
+      "name": "before_after_output_agreement",
+      "status": "PASS",
+      "all_cases_agree": true,
+      "subtests_count": 20
+    },
+    {
+      "name": "api_and_dependencies_preserved",
+      "status": "PASS",
+      "public_api_unchanged": true,
+      "imports": [
+        "bytes",
+        "fmt",
+        "sort",
+        "strings",
+        "time"
+      ],
+      "no_new_dependencies": true
+    },
+    {
+      "name": "maintenance_and_toml_verification",
+      "status": "PASS",
+      "maintenance_path": "/Users/anikasharma/snai task/exercises/practice/ledger/.meta/MAINTENANCE.md",
+      "canonical_cases_count": 12,
+      "readability_improvement_documented": true
+    }
+  ],
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python3": "Python 3.9.6",
+    "git": "git version 2.54.0 (Apple Git-157)"
+  },
+  "success": true
+}
