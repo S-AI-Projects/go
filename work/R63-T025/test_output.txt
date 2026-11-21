@@ -1,0 +1,32 @@
+=== Command: go test -count=1 ./... ===
+Return Code: 0
+STDOUT:
+ok  	piecingittogether	0.319s
+
+STDERR:
+
+
+=== Command: go test -v -count=1 ./... ===
+Return Code: 0
+STDOUT:
+=== RUN   TestJigsawData
+=== RUN   TestJigsawData/1000_pieces_puzzle_with_1.6_aspect_ratio
+=== RUN   TestJigsawData/square_puzzle_with_32_rows
+=== RUN   TestJigsawData/400_pieces_square_puzzle_with_only_inside_pieces_and_aspect_ratio
+=== RUN   TestJigsawData/1500_pieces_landscape_puzzle_with_30_rows_and_1.6_aspect_ratio
+=== RUN   TestJigsawData/300_pieces_portrait_puzzle_with_70_border_pieces
+=== RUN   TestJigsawData/puzzle_with_insufficient_data
+=== RUN   TestJigsawData/puzzle_with_contradictory_data
+--- PASS: TestJigsawData (0.00s)
+    --- PASS: TestJigsawData/1000_pieces_puzzle_with_1.6_aspect_ratio (0.00s)
+    --- PASS: TestJigsawData/square_puzzle_with_32_rows (0.00s)
+    --- PASS: TestJigsawData/400_pieces_square_puzzle_with_only_inside_pieces_and_aspect_ratio (0.00s)
+    --- PASS: TestJigsawData/1500_pieces_landscape_puzzle_with_30_rows_and_1.6_aspect_ratio (0.00s)
+    --- PASS: TestJigsawData/300_pieces_portrait_puzzle_with_70_border_pieces (0.00s)
+    --- PASS: TestJigsawData/puzzle_with_insufficient_data (0.00s)
+    --- PASS: TestJigsawData/puzzle_with_contradictory_data (0.00s)
+PASS
+ok  	piecingittogether	0.052s
+
+STDERR:
+
