@@ -1,0 +1,68 @@
+{
+  "task": "R63-T022",
+  "exercise": "word-count",
+  "checks": [
+    {
+      "name": "path_resolution",
+      "status": "PASS",
+      "resolved": {
+        "solution": "word_count.go",
+        "example": ".meta/example.go",
+        "tests": [
+          "word_count_test.go",
+          "cases_test.go"
+        ]
+      }
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "status": "PASS",
+      "details": "word_count.go contains unsolved panic stub and unaltered Frequency type definition"
+    },
+    {
+      "name": "reference_test_execution",
+      "status": "PASS",
+      "executed_cases_count": 14,
+      "return_code": 0,
+      "passed_subtests": [
+        "count_one_word",
+        "count_one_of_each_word",
+        "multiple_occurrences_of_a_word",
+        "handles_cramped_lists",
+        "handles_expanded_lists",
+        "ignore_punctuation",
+        "include_numbers",
+        "normalize_case",
+        "with_apostrophes",
+        "with_quotations",
+        "substrings_from_the_beginning",
+        "multiple_spaces_not_detected_as_a_word",
+        "alternating_word_separators_not_detected_as_a_word",
+        "quotation_for_word_with_apostrophe"
+      ]
+    },
+    {
+      "name": "two_generations_reproducibility",
+      "status": "PASS",
+      "generation_1_matches_generation_2": true,
+      "generation_matches_repo_after_normalization": true,
+      "generated_cases_count": 14,
+      "excluded_case_properly_dropped": true
+    },
+    {
+      "name": "maintenance_page_verification",
+      "status": "PASS",
+      "maintenance_path": "/Users/anikasharma/snai task/exercises/practice/word-count/.meta/MAINTENANCE.md",
+      "total_canonical_cases": 15,
+      "included_cases": 14,
+      "excluded_cases": 1,
+      "reproduction_command_documented": true
+    }
+  ],
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python3": "Python 3.9.6",
+    "git": "git version 2.54.0 (Apple Git-157)"
+  },
+  "success": true
+}
