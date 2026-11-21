@@ -1,0 +1,38 @@
+Task R63-T021 Verification Report
+=================================
+
+Tool Versions:
+  go: go version go1.27.4 darwin/arm64
+  python3: Python 3.9.6
+  git: git version 2.54.0 (Apple Git-157)
+
+Inclusion Counts (Before & After):
+  Total canonical cases: 29
+  Included cases count:  24
+  Excluded cases count:  5
+  Inclusions changed:    0 (all include flags preserved)
+
+Target UUID Rationales:
+UUID: 70d747a1-2e84-4ebc-bc3f-dcbee6a05f6b
+  Description: push -> Can push to an empty list
+  Category:    Replacement
+  Rationale:   Replacement case: Superseded and reimplemented by f3197f0a-1fea-45a5-939f-4a5ea60387ec ('push -> Can push to an empty list'). Both test the Go Push operation (l.Push(1)) on an empty list initialized with New([]int{}). Excluded to prevent duplicate test generation while preserving test coverage via the replacement UUID.
+
+UUID: b97d00b6-2fab-435d-ae74-3233dcc13698
+  Description: toList LIFO -> Empty linked list to list is empty
+  Category:    Unsupported
+  Rationale:   Unsupported behavior: The Go track defines Array() in FIFO order (toList FIFO, reversing values() with slices.Reverse), which is mutually exclusive with toList LIFO. The empty list case is tested by enabled FIFO case 03fc83a5-48a8-470b-a2d2-a286c5e8365f ('toList FIFO -> Empty linked list to list is empty').
+
+UUID: eedeb95f-b5cf-431d-8ad6-5854ba6b251c
+  Description: toList LIFO -> To list with multiple values
+  Category:    Unsupported
+  Rationale:   Unsupported behavior: toList LIFO expects [3, 2, 1] for initialValues [1, 2, 3], but Go's Array() operation returns []int in FIFO order [1, 2, 3] via slices.Reverse(list.values()). Go does not support LIFO output on Array(); multiple-value conversion is tested by enabled FIFO case 1282484e-a58c-426a-972e-90746bda61fc ('toList FIFO -> To list with multiple values').
+
+
+Test Suite Checks (Scratch Module):
+  Executed test cases: 24
+  Return code: 0
+  All 24 enabled test cases passed against reference.
+
+Learner Stub Status:
+  exercises/practice/simple-linked-list/simple_linked_list.go remains untouched and unsolved (contains panic stubs).
