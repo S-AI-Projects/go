@@ -21,6 +21,7 @@ description = "credit and debit"
 [502c4106-0371-4e7c-a7d8-9ce33f16ccb1]
 description = "multiple entries on same date ordered by description"
 include = false
+comment = "Superseded by 9c70709f-cbbd-4b3b-b367-81d7c6101de4 which reimplements this test"
 
 [29dd3659-6c2d-4380-94a8-6d96086e28e1]
 description = "final order tie breaker is change"
@@ -30,19 +31,25 @@ description = "overlong description is truncated"
 
 [67318aad-af53-4f3d-aa19-1293b4d4c924]
 description = "euros"
+comment = "Tests EUR currency formatting in en-US locale"
 
 [bdc499b6-51f5-4117-95f2-43cb6737208e]
 description = "Dutch locale"
+comment = "Tests USD currency formatting in nl-NL locale"
 
 [86591cd4-1379-4208-ae54-0ee2652b4670]
 description = "Dutch locale and euros"
+comment = "Tests EUR currency formatting in nl-NL locale"
 
 [876bcec8-d7d7-4ba4-82bd-b836ac87c5d2]
 description = "Dutch negative number with 3 digits before decimal point"
+comment = "Tests negative amount formatting with thousands separator in Dutch locale"
 
 [29670d1c-56be-492a-9c5e-427e4b766309]
 description = "American negative number with 3 digits before decimal point"
+comment = "Tests negative amount formatting with parentheses in American locale"
 
 [9c70709f-cbbd-4b3b-b367-81d7c6101de4]
 description = "multiple entries on same date ordered by description"
 reimplements = "502c4106-0371-4e7c-a7d8-9ce33f16ccb1"
+comment = "Validates tie-breaking sorting by description when dates are equal"

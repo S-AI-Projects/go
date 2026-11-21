@@ -59,17 +59,17 @@ type localeInfo struct {
 	translations map[string]string
 }
 
-func (f localeInfo) currencyString(symbol string, cents int) string {
+func (loc localeInfo) currencyString(symbol string, cents int) string {
 	negative := false
 	if cents < 0 {
 		cents *= -1
 		negative = true
 	}
-	return f.currency(symbol, cents, negative)
+	return loc.currency(symbol, cents, negative)
 }
 
-func (f localeInfo) dateString(t time.Time) string {
-	return t.Format(f.dateFormat)
+func (loc localeInfo) dateString(t time.Time) string {
+	return t.Format(loc.dateFormat)
 }
 
 var locales = map[string]localeInfo{
@@ -123,26 +123,22 @@ func americanCurrencyFormat(symbol string, cents int, negative bool) string {
 
 // Precondition: cents is not negative
 func moneyToString(cents int, thousandsSep, decimalSep string) string {
-	centsStr := fmt.Sprintf("%03d", cents) // Pad to 3 digits
-	centsPart := centsStr[len(centsStr)-2:]
-	rest := centsStr[:len(centsStr)-2]
-	var parts []string
-	for len(rest) > 3 {
-		parts = append(parts, rest[len(rest)-3:])
-		rest = rest[:len(rest)-3]
+	wholeUnits := cents / 100
+	fractionalCents := cents % 100
+
+	wholeStr := fmt.Sprintf("%d", wholeUnits)
+	var groups []string
+
+	firstGroupLen := len(wholeStr) % 3
+	if firstGroupLen > 0 {
+		groups = append(groups, wholeStr[:firstGroupLen])
 	}
-	if len(rest) > 0 {
-		parts = append(parts, rest)
+	for i := firstGroupLen; i < len(wholeStr); i += 3 {
+		groups = append(groups, wholeStr[i:i+3])
 	}
-	revParts := make([]string, 0, len(parts))
-	for i := len(parts) - 1; i >= 0; i-- {
-		revParts = append(revParts, parts[i])
-	}
-	var buf bytes.Buffer
-	buf.WriteString(strings.Join(revParts, thousandsSep))
-	buf.WriteString(decimalSep)
-	buf.WriteString(centsPart)
-	return buf.String()
+
+	formattedWhole := strings.Join(groups, thousandsSep)
+	return fmt.Sprintf("%s%s%02d", formattedWhole, decimalSep, fractionalCents)
 }
 
 type entrySlice []Entry
