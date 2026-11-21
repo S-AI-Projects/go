@@ -1,0 +1,46 @@
+=== Command: go test -count=1 ./... ===
+Return Code: 0
+STDOUT:
+ok  	wordcount	0.289s
+
+STDERR:
+
+
+=== Command: go test -v -count=1 ./... ===
+Return Code: 0
+STDOUT:
+=== RUN   TestWordCount
+=== RUN   TestWordCount/count_one_word
+=== RUN   TestWordCount/count_one_of_each_word
+=== RUN   TestWordCount/multiple_occurrences_of_a_word
+=== RUN   TestWordCount/handles_cramped_lists
+=== RUN   TestWordCount/handles_expanded_lists
+=== RUN   TestWordCount/ignore_punctuation
+=== RUN   TestWordCount/include_numbers
+=== RUN   TestWordCount/normalize_case
+=== RUN   TestWordCount/with_apostrophes
+=== RUN   TestWordCount/with_quotations
+=== RUN   TestWordCount/substrings_from_the_beginning
+=== RUN   TestWordCount/multiple_spaces_not_detected_as_a_word
+=== RUN   TestWordCount/alternating_word_separators_not_detected_as_a_word
+=== RUN   TestWordCount/quotation_for_word_with_apostrophe
+--- PASS: TestWordCount (0.00s)
+    --- PASS: TestWordCount/count_one_word (0.00s)
+    --- PASS: TestWordCount/count_one_of_each_word (0.00s)
+    --- PASS: TestWordCount/multiple_occurrences_of_a_word (0.00s)
+    --- PASS: TestWordCount/handles_cramped_lists (0.00s)
+    --- PASS: TestWordCount/handles_expanded_lists (0.00s)
+    --- PASS: TestWordCount/ignore_punctuation (0.00s)
+    --- PASS: TestWordCount/include_numbers (0.00s)
+    --- PASS: TestWordCount/normalize_case (0.00s)
+    --- PASS: TestWordCount/with_apostrophes (0.00s)
+    --- PASS: TestWordCount/with_quotations (0.00s)
+    --- PASS: TestWordCount/substrings_from_the_beginning (0.00s)
+    --- PASS: TestWordCount/multiple_spaces_not_detected_as_a_word (0.00s)
+    --- PASS: TestWordCount/alternating_word_separators_not_detected_as_a_word (0.00s)
+    --- PASS: TestWordCount/quotation_for_word_with_apostrophe (0.00s)
+PASS
+ok  	wordcount	0.065s
+
+STDERR:
+
