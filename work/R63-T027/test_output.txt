@@ -1,0 +1,42 @@
+=== Command: go test -count=1 ./... ===
+Return code: 0
+Output:
+ok  	rectangles	0.495s
+
+
+=== Command: go test -v -count=1 ./... ===
+Return code: 0
+Output:
+=== RUN   TestRectangles
+=== RUN   TestRectangles/no_rows
+=== RUN   TestRectangles/no_columns
+=== RUN   TestRectangles/no_rectangles
+=== RUN   TestRectangles/one_rectangle
+=== RUN   TestRectangles/two_rectangles_without_shared_parts
+=== RUN   TestRectangles/five_rectangles_with_shared_parts
+=== RUN   TestRectangles/rectangle_of_height_1_is_counted
+=== RUN   TestRectangles/rectangle_of_width_1_is_counted
+=== RUN   TestRectangles/1x1_square_is_counted
+=== RUN   TestRectangles/only_complete_rectangles_are_counted
+=== RUN   TestRectangles/rectangles_can_be_of_different_sizes
+=== RUN   TestRectangles/corner_is_required_for_a_rectangle_to_be_complete
+=== RUN   TestRectangles/large_input_with_many_rectangles
+=== RUN   TestRectangles/rectangles_must_have_four_sides
+--- PASS: TestRectangles (0.00s)
+    --- PASS: TestRectangles/no_rows (0.00s)
+    --- PASS: TestRectangles/no_columns (0.00s)
+    --- PASS: TestRectangles/no_rectangles (0.00s)
+    --- PASS: TestRectangles/one_rectangle (0.00s)
+    --- PASS: TestRectangles/two_rectangles_without_shared_parts (0.00s)
+    --- PASS: TestRectangles/five_rectangles_with_shared_parts (0.00s)
+    --- PASS: TestRectangles/rectangle_of_height_1_is_counted (0.00s)
+    --- PASS: TestRectangles/rectangle_of_width_1_is_counted (0.00s)
+    --- PASS: TestRectangles/1x1_square_is_counted (0.00s)
+    --- PASS: TestRectangles/only_complete_rectangles_are_counted (0.00s)
+    --- PASS: TestRectangles/rectangles_can_be_of_different_sizes (0.00s)
+    --- PASS: TestRectangles/corner_is_required_for_a_rectangle_to_be_complete (0.00s)
+    --- PASS: TestRectangles/large_input_with_many_rectangles (0.00s)
+    --- PASS: TestRectangles/rectangles_must_have_four_sides (0.00s)
+PASS
+ok  	rectangles	0.062s
+
