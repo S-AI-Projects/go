@@ -1,0 +1,50 @@
+=== Command: go test -count=1 ./... ===
+Return Code: 0
+STDOUT:
+ok  	strain	0.464s
+
+STDERR:
+
+
+=== Command: go test -v -count=1 ./... ===
+Return Code: 0
+STDOUT:
+=== RUN   TestInt
+=== RUN   TestInt/keep_on_empty_list_returns_empty_list
+=== RUN   TestInt/keeps_everything
+=== RUN   TestInt/keeps_nothing
+=== RUN   TestInt/keeps_first_and_last
+=== RUN   TestInt/keeps_neither_first_nor_last
+=== RUN   TestInt/discard_on_empty_list_returns_empty_list
+=== RUN   TestInt/discards_everything
+=== RUN   TestInt/discards_nothing
+=== RUN   TestInt/discards_first_and_last
+=== RUN   TestInt/discards_neither_first_nor_last
+--- PASS: TestInt (0.00s)
+    --- PASS: TestInt/keep_on_empty_list_returns_empty_list (0.00s)
+    --- PASS: TestInt/keeps_everything (0.00s)
+    --- PASS: TestInt/keeps_nothing (0.00s)
+    --- PASS: TestInt/keeps_first_and_last (0.00s)
+    --- PASS: TestInt/keeps_neither_first_nor_last (0.00s)
+    --- PASS: TestInt/discard_on_empty_list_returns_empty_list (0.00s)
+    --- PASS: TestInt/discards_everything (0.00s)
+    --- PASS: TestInt/discards_nothing (0.00s)
+    --- PASS: TestInt/discards_first_and_last (0.00s)
+    --- PASS: TestInt/discards_neither_first_nor_last (0.00s)
+=== RUN   TestString
+=== RUN   TestString/keeps_strings
+=== RUN   TestString/discards_strings
+--- PASS: TestString (0.00s)
+    --- PASS: TestString/keeps_strings (0.00s)
+    --- PASS: TestString/discards_strings (0.00s)
+=== RUN   TestSlice
+=== RUN   TestSlice/keeps_lists
+=== RUN   TestSlice/discards_lists
+--- PASS: TestSlice (0.00s)
+    --- PASS: TestSlice/keeps_lists (0.00s)
+    --- PASS: TestSlice/discards_lists (0.00s)
+PASS
+ok  	strain	0.055s
+
+STDERR:
+

@@ -1,0 +1,83 @@
+{
+  "task": "R63-T023",
+  "exercise": "strain",
+  "checks": [
+    {
+      "name": "path_resolution",
+      "status": "PASS",
+      "resolved": {
+        "solution": "strain.go",
+        "example": ".meta/example.go",
+        "tests": [
+          "strain_test.go",
+          "cases_test.go"
+        ]
+      }
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "status": "PASS",
+      "details": "strain.go contains unsolved stub comments without implementations"
+    },
+    {
+      "name": "reference_test_execution",
+      "status": "PASS",
+      "executed_cases_count": 14,
+      "return_code": 0,
+      "passed_subtests": [
+        "keep_on_empty_list_returns_empty_list",
+        "keeps_everything",
+        "keeps_nothing",
+        "keeps_first_and_last",
+        "keeps_neither_first_nor_last",
+        "discard_on_empty_list_returns_empty_list",
+        "discards_everything",
+        "discards_nothing",
+        "discards_first_and_last",
+        "discards_neither_first_nor_last",
+        "keeps_strings",
+        "discards_strings",
+        "keeps_lists",
+        "discards_lists"
+      ]
+    },
+    {
+      "name": "mutant_rejection_check",
+      "status": "PASS",
+      "condition_mutant_rejected": true,
+      "condition_rejecting_case": "keeps_everything (UUID f535cb4d-e99b-472a-bd52-9fa0ffccf454)",
+      "in_place_mutant_rejected": true,
+      "in_place_rejecting_case": "keeps_first_and_last (UUID 92694259-6e76-470c-af87-156bdf75018a)",
+      "formatting_only_rejected_as_invalid_mutation": true
+    },
+    {
+      "name": "reduced_rejecting_case",
+      "status": "PASS",
+      "minimal_input": "[1]",
+      "predicate": "func(x int) bool { return true }",
+      "original_output": "[1]",
+      "mutant_output": "[]",
+      "discrepancy_verified": true
+    },
+    {
+      "name": "hints_verification",
+      "status": "PASS",
+      "contract_explained": true,
+      "diagnostic_input_provided": true,
+      "full_solution_omitted": true
+    },
+    {
+      "name": "maintenance_and_toml_verification",
+      "status": "PASS",
+      "maintenance_path": "/Users/anikasharma/snai task/exercises/practice/strain/.meta/MAINTENANCE.md",
+      "canonical_cases_count": 14,
+      "proposed_case_documented": true
+    }
+  ],
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python3": "Python 3.9.6",
+    "git": "git version 2.54.0 (Apple Git-157)"
+  },
+  "success": true
+}

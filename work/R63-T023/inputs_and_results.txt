@@ -1,0 +1,36 @@
+Task R63-T023 Verification Report
+=================================
+
+Tool Versions:
+  go: go version go1.27.4 darwin/arm64
+  python3: Python 3.9.6
+  git: git version 2.54.0 (Apple Git-157)
+
+Path Resolution:
+  Exercise: /Users/anikasharma/snai task/exercises/practice/strain
+  Solution stub: /Users/anikasharma/snai task/exercises/practice/strain/strain.go
+  Reference implementation: /Users/anikasharma/snai task/exercises/practice/strain/.meta/example.go
+  Test files: ['/Users/anikasharma/snai task/exercises/practice/strain/strain_test.go', '/Users/anikasharma/snai task/exercises/practice/strain/cases_test.go']
+
+Learner Stub Status:
+  exercises/practice/strain/strain.go remains unchanged and unsolved.
+
+Scratch Module Test Execution (Original Reference):
+  Executed test cases: 14
+  Return code: 0
+  All 14 enabled cases passed.
+
+Mutation Analysis:
+  Mutant 1 (Condition Inversion: 'if !fn(entry)' instead of 'if fn(entry)'):
+    Rejected by: TestInt/keeps_everything (UUID f535cb4d-e99b-472a-bd52-9fa0ffccf454)
+    Assertion: Keep([]int{1, 3, 5}, true) = []int{}, want []int{1, 3, 5}
+    Smallest rejecting input: [1] with predicate func(x) true (Expected: [1], Mutant: [])
+  Mutant 2 (In-Place Mutation: 'result := list[:0]'):
+    Rejected by: TestInt/keeps_first_and_last (UUID 92694259-6e76-470c-af87-156bdf75018a)
+    Assertion: modified the input data; input data should not change
+    Smallest rejecting input: [1, 2] with predicate func(x) x%2==0
+
+Documentation Verification:
+  Hints file: /Users/anikasharma/snai task/exercises/practice/strain/.docs/hints.md (explains contract and small diagnostic input without publishing solution)
+  Maintenance guide: /Users/anikasharma/snai task/exercises/practice/strain/.meta/MAINTENANCE.md (records mutation analysis, file classifications, and proposed case)
+  tests.toml: /Users/anikasharma/snai task/exercises/practice/strain/.meta/tests.toml (14 canonical cases maintained)
