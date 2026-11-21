@@ -1,0 +1,29 @@
+Task R63-T027 Verification Report
+=================================
+
+Tool Versions:
+  go: go version go1.27.4 darwin/arm64
+  python3: Python 3.9.6
+  git: git version 2.54.0 (Apple Git-157)
+
+Test Suite Checks (Scratch Module):
+  Test count executed: 14
+  All 14 cases passed against reference.
+
+Micro-Example 1 (ASCII byte indexing):
+  Input: '+--+'
+  Expected Output: firstByte=43 char=+ match=true len=4
+  Actual Output:   firstByte=43 char=+ match=true len=4
+  Result: MATCH
+
+Micro-Example 2 (Unicode box-drawing pitfall):
+  Input: '┌──┐'
+  Expected Output: firstByte=226 rune=┌ match=false byteLen=12 runeCount=4
+  Actual Output:   firstByte=226 rune=┌ match=false byteLen=12 runeCount=4
+  Result: MATCH
+
+Learner Stub Status:
+  exercises/practice/rectangles/rectangles.go remains unchanged and unsolved (panics as required).
+
+Published Guidance Status:
+  exercises/practice/rectangles/.docs/instructions.append.md published and verified.

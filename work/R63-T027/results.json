@@ -1,0 +1,89 @@
+{
+  "task": "R63-T027",
+  "exercise": "rectangles",
+  "checks": [
+    {
+      "name": "path_resolution",
+      "status": "PASS",
+      "resolved": {
+        "solution": "rectangles.go",
+        "example": ".meta/example.go",
+        "tests": [
+          "rectangles_test.go",
+          "cases_test.go"
+        ]
+      }
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "status": "PASS",
+      "details": "rectangles.go still contains panic stub"
+    },
+    {
+      "name": "scratch_reference_test",
+      "status": "PASS",
+      "test_count": 14,
+      "executed_cases": [
+        "no_rows",
+        "no_columns",
+        "no_rectangles",
+        "one_rectangle",
+        "two_rectangles_without_shared_parts",
+        "five_rectangles_with_shared_parts",
+        "rectangle_of_height_1_is_counted",
+        "rectangle_of_width_1_is_counted",
+        "1x1_square_is_counted",
+        "only_complete_rectangles_are_counted",
+        "rectangles_can_be_of_different_sizes",
+        "corner_is_required_for_a_rectangle_to_be_complete",
+        "large_input_with_many_rectangles",
+        "rectangles_must_have_four_sides"
+      ],
+      "toml_cases": [
+        "no rows",
+        "no columns",
+        "no rectangles",
+        "one rectangle",
+        "two rectangles without shared parts",
+        "five rectangles with shared parts",
+        "rectangle of height 1 is counted",
+        "rectangle of width 1 is counted",
+        "1x1 square is counted",
+        "only complete rectangles are counted",
+        "rectangles can be of different sizes",
+        "corner is required for a rectangle to be complete",
+        "large input with many rectangles",
+        "rectangles must have four sides"
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "micro_example_1_ascii_byte_indexing",
+      "status": "PASS",
+      "input": "+--+",
+      "actual": "firstByte=43 char=+ match=true len=4",
+      "expected": "firstByte=43 char=+ match=true len=4"
+    },
+    {
+      "name": "micro_example_2_unicode_pitfall",
+      "status": "PASS",
+      "input": "\u250c\u2500\u2500\u2510",
+      "actual": "firstByte=226 rune=\u250c match=false byteLen=12 runeCount=4",
+      "expected": "firstByte=226 rune=\u250c match=false byteLen=12 runeCount=4"
+    },
+    {
+      "name": "published_guidance_verification",
+      "status": "PASS",
+      "guidance_path": "/Users/anikasharma/snai task/exercises/practice/rectangles/.docs/instructions.append.md",
+      "construct_named": "rune versus byte handling (string byte indexing)",
+      "micro_example_1_output_agreed": true,
+      "micro_example_2_output_agreed": true
+    }
+  ],
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python3": "Python 3.9.6",
+    "git": "git version 2.54.0 (Apple Git-157)"
+  },
+  "success": true
+}
