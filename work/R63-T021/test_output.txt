@@ -1,0 +1,62 @@
+=== Command: go test -count=1 ./... ===
+Return code: 0
+Output:
+ok  	simplelinkedlist	0.711s
+
+
+=== Command: go test -v -count=1 ./... ===
+Return code: 0
+Output:
+=== RUN   TestList
+=== RUN   TestList/Empty_list_has_length_of_zero
+=== RUN   TestList/Singleton_list_has_length_of_one
+=== RUN   TestList/Non-empty_list_has_correct_length
+=== RUN   TestList/Pop_from_empty_list_is_an_error
+=== RUN   TestList/Can_pop_from_singleton_list
+=== RUN   TestList/Can_pop_from_non-empty_list
+=== RUN   TestList/Can_pop_multiple_items
+=== RUN   TestList/Pop_updates_the_count
+=== RUN   TestList/Can_push_to_an_empty_list
+=== RUN   TestList/Can_push_to_a_non-empty_list
+=== RUN   TestList/Push_updates_count
+=== RUN   TestList/Push_and_pop
+=== RUN   TestList/Peek_on_empty_list_is_an_error
+=== RUN   TestList/Can_peek_on_singleton_list
+=== RUN   TestList/Can_peek_on_non-empty_list
+=== RUN   TestList/Peek_does_not_change_the_count
+=== RUN   TestList/Can_peek_after_a_pop_and_push
+=== RUN   TestList/Empty_linked_list_to_list_is_empty
+=== RUN   TestList/To_list_with_multiple_values
+=== RUN   TestList/To_list_after_a_pop
+=== RUN   TestList/Reversed_empty_list_has_same_values
+=== RUN   TestList/Reversed_singleton_list_is_same_list
+=== RUN   TestList/Reversed_non-empty_list_is_reversed
+=== RUN   TestList/Double_reverse
+--- PASS: TestList (0.00s)
+    --- PASS: TestList/Empty_list_has_length_of_zero (0.00s)
+    --- PASS: TestList/Singleton_list_has_length_of_one (0.00s)
+    --- PASS: TestList/Non-empty_list_has_correct_length (0.00s)
+    --- PASS: TestList/Pop_from_empty_list_is_an_error (0.00s)
+    --- PASS: TestList/Can_pop_from_singleton_list (0.00s)
+    --- PASS: TestList/Can_pop_from_non-empty_list (0.00s)
+    --- PASS: TestList/Can_pop_multiple_items (0.00s)
+    --- PASS: TestList/Pop_updates_the_count (0.00s)
+    --- PASS: TestList/Can_push_to_an_empty_list (0.00s)
+    --- PASS: TestList/Can_push_to_a_non-empty_list (0.00s)
+    --- PASS: TestList/Push_updates_count (0.00s)
+    --- PASS: TestList/Push_and_pop (0.00s)
+    --- PASS: TestList/Peek_on_empty_list_is_an_error (0.00s)
+    --- PASS: TestList/Can_peek_on_singleton_list (0.00s)
+    --- PASS: TestList/Can_peek_on_non-empty_list (0.00s)
+    --- PASS: TestList/Peek_does_not_change_the_count (0.00s)
+    --- PASS: TestList/Can_peek_after_a_pop_and_push (0.00s)
+    --- PASS: TestList/Empty_linked_list_to_list_is_empty (0.00s)
+    --- PASS: TestList/To_list_with_multiple_values (0.00s)
+    --- PASS: TestList/To_list_after_a_pop (0.00s)
+    --- PASS: TestList/Reversed_empty_list_has_same_values (0.00s)
+    --- PASS: TestList/Reversed_singleton_list_is_same_list (0.00s)
+    --- PASS: TestList/Reversed_non-empty_list_is_reversed (0.00s)
+    --- PASS: TestList/Double_reverse (0.00s)
+PASS
+ok  	simplelinkedlist	0.059s
+
