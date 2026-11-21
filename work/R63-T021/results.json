@@ -1,0 +1,88 @@
+{
+  "task": "R63-T021",
+  "exercise": "simple-linked-list",
+  "checks": [
+    {
+      "name": "path_resolution",
+      "status": "PASS",
+      "resolved": {
+        "solution": "simple_linked_list.go",
+        "example": ".meta/example.go",
+        "tests": [
+          "simple_linked_list_test.go",
+          "cases_test.go"
+        ]
+      }
+    },
+    {
+      "name": "learner_stub_unsolved",
+      "status": "PASS",
+      "details": "simple_linked_list.go contains unsolved panic stubs"
+    },
+    {
+      "name": "scratch_reference_test",
+      "status": "PASS",
+      "test_count": 24,
+      "executed_cases": [
+        "Empty_list_has_length_of_zero",
+        "Singleton_list_has_length_of_one",
+        "Non-empty_list_has_correct_length",
+        "Pop_from_empty_list_is_an_error",
+        "Can_pop_from_singleton_list",
+        "Can_pop_from_non-empty_list",
+        "Can_pop_multiple_items",
+        "Pop_updates_the_count",
+        "Can_push_to_an_empty_list",
+        "Can_push_to_a_non-empty_list",
+        "Push_updates_count",
+        "Push_and_pop",
+        "Peek_on_empty_list_is_an_error",
+        "Can_peek_on_singleton_list",
+        "Can_peek_on_non-empty_list",
+        "Peek_does_not_change_the_count",
+        "Can_peek_after_a_pop_and_push",
+        "Empty_linked_list_to_list_is_empty",
+        "To_list_with_multiple_values",
+        "To_list_after_a_pop",
+        "Reversed_empty_list_has_same_values",
+        "Reversed_singleton_list_is_same_list",
+        "Reversed_non-empty_list_is_reversed",
+        "Double_reverse"
+      ],
+      "return_code": 0
+    },
+    {
+      "name": "toml_and_rationales_check",
+      "status": "PASS",
+      "total_cases": 29,
+      "included_count": 24,
+      "excluded_count": 5,
+      "rationales": {
+        "70d747a1-2e84-4ebc-bc3f-dcbee6a05f6b": {
+          "description": "push -> Can push to an empty list",
+          "include": false,
+          "comment": "Replacement case: Superseded and reimplemented by f3197f0a-1fea-45a5-939f-4a5ea60387ec ('push -> Can push to an empty list'). Both test the Go Push operation (l.Push(1)) on an empty list initialized with New([]int{}). Excluded to prevent duplicate test generation while preserving test coverage via the replacement UUID.",
+          "category": "replacement"
+        },
+        "b97d00b6-2fab-435d-ae74-3233dcc13698": {
+          "description": "toList LIFO -> Empty linked list to list is empty",
+          "include": false,
+          "comment": "Unsupported behavior: The Go track defines Array() in FIFO order (toList FIFO, reversing values() with slices.Reverse), which is mutually exclusive with toList LIFO. The empty list case is tested by enabled FIFO case 03fc83a5-48a8-470b-a2d2-a286c5e8365f ('toList FIFO -> Empty linked list to list is empty').",
+          "category": "unsupported"
+        },
+        "eedeb95f-b5cf-431d-8ad6-5854ba6b251c": {
+          "description": "toList LIFO -> To list with multiple values",
+          "include": false,
+          "comment": "Unsupported behavior: toList LIFO expects [3, 2, 1] for initialValues [1, 2, 3], but Go's Array() operation returns []int in FIFO order [1, 2, 3] via slices.Reverse(list.values()). Go does not support LIFO output on Array(); multiple-value conversion is tested by enabled FIFO case 1282484e-a58c-426a-972e-90746bda61fc ('toList FIFO -> To list with multiple values').",
+          "category": "unsupported"
+        }
+      }
+    }
+  ],
+  "tool_versions": {
+    "go": "go version go1.27.4 darwin/arm64",
+    "python3": "Python 3.9.6",
+    "git": "git version 2.54.0 (Apple Git-157)"
+  },
+  "success": true
+}

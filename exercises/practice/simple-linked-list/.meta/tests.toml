@@ -36,7 +36,7 @@ description = "pop -> Pop updates the count"
 [70d747a1-2e84-4ebc-bc3f-dcbee6a05f6b]
 description = "push -> Can push to an empty list"
 include = false
-comment = "reimplemented by f3197f0a-1fea-45a5-939f-4a5ea60387ec"
+comment = "Replacement case: Superseded and reimplemented by f3197f0a-1fea-45a5-939f-4a5ea60387ec ('push -> Can push to an empty list'). Both test the Go Push operation (l.Push(1)) on an empty list initialized with New([]int{}). Excluded to prevent duplicate test generation while preserving test coverage via the replacement UUID."
 
 [f3197f0a-1fea-45a5-939f-4a5ea60387ec]
 description = "push -> Can push to an empty list"
@@ -69,17 +69,17 @@ description = "peek -> Can peek after a pop and push"
 [b97d00b6-2fab-435d-ae74-3233dcc13698]
 description = "toList LIFO -> Empty linked list to list is empty"
 include = false
-comments = "mutually exclusive with the FIFO implementation"
+comment = "Unsupported behavior: The Go track defines Array() in FIFO order (toList FIFO, reversing values() with slices.Reverse), which is mutually exclusive with toList LIFO. The empty list case is tested by enabled FIFO case 03fc83a5-48a8-470b-a2d2-a286c5e8365f ('toList FIFO -> Empty linked list to list is empty')."
 
 [eedeb95f-b5cf-431d-8ad6-5854ba6b251c]
 description = "toList LIFO -> To list with multiple values"
 include = false
-comments = "mutually exclusive with the FIFO implementation"
+comment = "Unsupported behavior: toList LIFO expects [3, 2, 1] for initialValues [1, 2, 3], but Go's Array() operation returns []int in FIFO order [1, 2, 3] via slices.Reverse(list.values()). Go does not support LIFO output on Array(); multiple-value conversion is tested by enabled FIFO case 1282484e-a58c-426a-972e-90746bda61fc ('toList FIFO -> To list with multiple values')."
 
 [838678de-eaf3-4c14-b34e-7e35b6d851e8]
 description = "toList LIFO -> To list after a pop"
 include = false
-comments = "mutually exclusive with the FIFO implementation"
+comment = "Unsupported behavior: mutually exclusive with the FIFO implementation; Go Array() returns FIFO order"
 
 [03fc83a5-48a8-470b-a2d2-a286c5e8365f]
 description = "toList FIFO -> Empty linked list to list is empty"
@@ -99,7 +99,7 @@ description = "reverse -> Reversed singleton list is same list"
 [92851ebe-9f52-4406-b92e-0718c441a2ab]
 description = "reverse -> Reversed non-empty list is reversed"
 include = false
-comments = "reimplemented by 1210eeda-b23f-4790-930c-7ac6d0c8e723"
+comment = "reimplemented by 1210eeda-b23f-4790-930c-7ac6d0c8e723"
 
 [1210eeda-b23f-4790-930c-7ac6d0c8e723]
 description = "reverse -> Reversed non-empty list is reversed"
