@@ -11,21 +11,28 @@
 
 [ad626f23-09a2-4f5f-ba22-eec0671fa2a9]
 description = "1000 pieces puzzle with 1.6 aspect ratio"
+comment = "Domain size N=1000 (landscape: 25 rows x 40 cols, 126 border, 874 inside); exercises setDetailsFromAspect aspect ratio search"
 
 [3e0c5919-3561-42f5-b9ed-26d70c20214e]
 description = "square puzzle with 32 rows"
+comment = "Domain size N=1024 (square: 32 rows x 32 cols, 124 border, 900 inside); exercises square format deduction"
 
 [1126f160-b094-4dc2-bf37-13e36e394867]
 description = "400 pieces square puzzle with only inside pieces and aspect ratio"
+comment = "Domain size N=400 (square: 20 rows x 20 cols, 76 border, 324 inside); exercises setDetailsForSquare inside pieces loop"
 
 [a9743178-5642-4cc0-8fdb-00d6b031c3a0]
 description = "1500 pieces landscape puzzle with 30 rows and 1.6 aspect ratio"
+comment = "Domain size N=1500 (landscape: 30 rows x 50 cols, 156 border, 1344 inside); exercises setColumsFromPiecesRows and aspect deduction"
 
 [f6378369-989c-497f-a6e2-f30b1fa76cba]
 description = "300 pieces portrait puzzle with 70 border pieces"
+comment = "Domain size N=300 (portrait: 25 rows x 12 cols, 70 border, 230 inside); exercises setRowsColumnsFromBorder linear divisor search"
 
 [f53f82ba-5663-4c7e-9e86-57fdbb3e53d2]
 description = "puzzle with insufficient data"
+comment = "Validation failure case: halts with 'Insufficient data' when known details cannot be deduced further"
 
 [a3d5c31a-cc74-44bf-b4fc-9e4d65f1ac1a]
 description = "puzzle with contradictory data"
+comment = "Validation failure case: halts with 'Contradictory data' on conflicting row/column/format specifications"
