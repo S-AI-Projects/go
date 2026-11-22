@@ -66,15 +66,10 @@ def main():
         # Run tests
         result = run_go_test(td)
         out = result.stdout
-        # Simple verification: exit code 0 and contain "PASS"
-        if result.returncode != 0 or "PASS" not in out:
-            print("Test run failed or no PASS found", file=sys.stderr)
+        # Verify that tests ran and passed (look for a line starting with "ok")
+        if result.returncode != 0 or not any(line.startswith('ok') for line in out.splitlines()):
+            print("Test run failed or no passing tests detected", file=sys.stderr)
             print(out, file=sys.stderr)
-            sys.exit(1)
-        # Extract test count (the line like ok   <pkg>  <time>)
-        # We'll just ensure the output mentions "run" which shows count
-        if "run" not in out.lower():
-            print("Could not detect test execution count", file=sys.stderr)
             sys.exit(1)
         # Success summary
         summary = {

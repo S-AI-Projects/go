@@ -37,7 +37,7 @@ def main():
         # Replace solution with reference implementation
         shutil.copy2(os.path.join(td, ex_rel), os.path.join(td, sol_rel))
         result = run_go_test(td)
-        if result.returncode != 0 or "PASS" not in result.stdout:
+        if result.returncode != 0 or not any(line.startswith('ok') for line in result.stdout.splitlines()):
             print("Reference test run failed", file=sys.stderr)
             print(result.stdout, file=sys.stderr)
             sys.exit(1)
